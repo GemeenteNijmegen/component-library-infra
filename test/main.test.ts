@@ -11,8 +11,6 @@ const snapshotEnv = {
 
 const config: Configuration = {
   branchName: 'snapshot-tests',
-  pipelineStackName: 'unit-test-pipeline-stack',
-  deployFromEnvironment: snapshotEnv,
   deployToEnvironment: snapshotEnv,
   includePipelineValidationChecks: false,
   subdomain: 'component-library-unittest',

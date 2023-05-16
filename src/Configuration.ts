@@ -13,9 +13,7 @@ export interface Environment extends CdkEnvironment {
 }
 
 export interface Configuration {
-  readonly deployFromEnvironment: Environment;
   readonly deployToEnvironment: Environment;
-  readonly pipelineStackName: string;
 
   /**
    * The branch name this configuration is used for
@@ -58,13 +56,8 @@ export function getConfiguration(branchName: string): Configuration {
 const configurations: { [name: string] : Configuration } = {
   development: {
     branchName: 'development',
-    pipelineStackName: 'component-library-development',
-    deployFromEnvironment: {
-      account: 'empty',
-      region: 'eu-central-1',
-    },
     deployToEnvironment: {
-      account: 'empty',
+      account: '598242258242',
       region: 'eu-central-1',
     },
     subdomain: 'componenten-dev',

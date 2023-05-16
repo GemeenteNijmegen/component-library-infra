@@ -31,7 +31,10 @@ export class PipelineStack extends Stack {
     const pipeline = this.pipeline(source);
     pipeline.addStage(
       new StaticWebsiteStage(this, 'component-library', {
-        env: props.configuration.deployToEnvironment,
+        env: {
+          region: 'eu-central-1',
+          account: new CfnParameter(this, 'targetAccount').valueAsString,
+        },
         configuration: props.configuration,
       }),
     );
