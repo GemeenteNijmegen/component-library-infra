@@ -1,4 +1,5 @@
-import { Stack, StackProps, Tags, pipelines, CfnParameter, Stage, StageProps } from 'aws-cdk-lib';
+import { PermissionsBoundaryAspect } from '@gemeentenijmegen/aws-constructs';
+import { Stack, StackProps, Tags, pipelines, CfnParameter, Stage, StageProps, Aspects } from 'aws-cdk-lib';
 import { Construct } from 'constructs';
 import { Configurable } from './Configuration';
 import { StaticWebsiteStack } from './StaticWebsiteStack';
@@ -18,6 +19,7 @@ export class PipelineStack extends Stack {
     super(scope, id, props);
     Tags.of(this).add('cdkManaged', 'yes');
     Tags.of(this).add('Project', props.projectName);
+    Aspects.of(this).add(new PermissionsBoundaryAspect());
     this.branchName = props.branchName;
     this.projectName = props.projectName;
     this.repository = props.repository;
@@ -28,7 +30,7 @@ export class PipelineStack extends Stack {
 
     const pipeline = this.pipeline(source);
     pipeline.addStage(
-      new StaticWebsiteStage(this, 'idcontact-dev', {
+      new StaticWebsiteStage(this, 'component-library', {
         env: props.configuration.deployToEnvironment,
         configuration: props.configuration,
       }),
@@ -69,6 +71,7 @@ class StaticWebsiteStage extends Stage {
   constructor(scope: Construct, id: string, props: StaticWebsiteStageProps) {
     super(scope, id, props);
 
+    Aspects.of(this).add(new PermissionsBoundaryAspect());
     const staticWebsiteStack = new StaticWebsiteStack(this, 'site', { env: props.env, configuration: props.configuration });
 
     const certStack = new UsEastCertificateStack(this, 'cert-stack', {

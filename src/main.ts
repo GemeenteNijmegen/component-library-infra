@@ -1,25 +1,21 @@
 import { App } from 'aws-cdk-lib';
+import { getConfiguration } from './Configuration';
 import { PipelineStack } from './PipelineStack';
 import { Statics } from './Statics';
 
 const deploymentEnvironment = {
-  account: '418648875085',
-  region: 'eu-west-1',
-};
-
-const env = {
-  account: '799049117469',
-  region: 'eu-west-1',
+  account: '836443378780',
+  region: 'eu-central-1',
 };
 
 export const app = new App();
 
-new PipelineStack(app, 'idcontact', {
+new PipelineStack(app, 'component-library', {
   projectName: Statics.projectName,
   repository: `${Statics.repositoryOwner}/${Statics.repository}`,
   env: deploymentEnvironment,
-  branchName: 'main',
-  deployToEnvironment: env,
+  branchName: 'development',
+  configuration: getConfiguration('development'),
 });
 
 
