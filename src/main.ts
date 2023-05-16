@@ -10,7 +10,7 @@ const deploymentEnvironment = {
 
 export const app = new App();
 
-new PipelineStack(app, 'component-library', {
+new PipelineStack(app, 'component-library-development', {
   projectName: Statics.projectName,
   repository: `${Statics.repositoryOwner}/${Statics.repository}`,
   env: deploymentEnvironment,
