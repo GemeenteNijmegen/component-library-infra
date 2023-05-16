@@ -1746,6 +1746,11 @@ case@1.6.3, case@^1.6.3:
   resolved "https://registry.yarnpkg.com/case/-/case-1.6.3.tgz#0a4386e3e9825351ca2e6216c60467ff5f1ea1c9"
   integrity sha512-mzDSXIPaFwVDvZAHqZ9VlbyF4yyXRuX6IvB06WvPYkqJVO24kX1PPhv9bfpKNFZyxYFmmgo03HUiD8iklmJYRQ==
 
+cdk-remote-stack@^2.0.11:
+  version "2.0.11"
+  resolved "https://registry.yarnpkg.com/cdk-remote-stack/-/cdk-remote-stack-2.0.11.tgz#2f30dc9863d1988396a361ed20eb5c8b4d6ae976"
+  integrity sha512-zujlacRiBgQxHbjDlV2cUr9v8GxaC72+1jKMohuAZeEaHrVq8nQtQP287IncJjOiUu1VuHS6J1kJ73orH/IIig==
+
 chalk@^2.0.0, chalk@^2.4.2:
   version "2.4.2"
   resolved "https://registry.yarnpkg.com/chalk/-/chalk-2.4.2.tgz#cd42541677a54333cf541a49108c1432b44c9424"
