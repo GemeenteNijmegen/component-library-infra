@@ -4,6 +4,7 @@ import { Construct } from 'constructs';
 import { Configurable } from './Configuration';
 import { StaticWebsiteStack } from './StaticWebsiteStack';
 import { UsEastCertificateStack } from './UsEastCertificateStack';
+import { DNSStack } from './DNSStack';
 
 export interface PipelineStackProps extends StackProps, Configurable {
   projectName: string;
@@ -72,12 +73,16 @@ class StaticWebsiteStage extends Stage {
     super(scope, id, props);
 
     Aspects.of(this).add(new PermissionsBoundaryAspect());
+
+    const dnsStack = new DNSStack(this, 'dns', { configuration: props.configuration });
+
     const staticWebsiteStack = new StaticWebsiteStack(this, 'site', { env: props.env, configuration: props.configuration });
 
     const certStack = new UsEastCertificateStack(this, 'cert-stack', {
       env: { account: this.account, region: 'us-east-1' },
       configuration: props.configuration,
     });
+    certStack.addDependency(dnsStack, 'dns parameters must exist for cert stack');
     staticWebsiteStack.addDependency(certStack, 'certificate must be created before use');
 
   }
