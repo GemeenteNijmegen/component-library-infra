@@ -25,7 +25,7 @@ export class DNSStack extends Stack {
     });
 
     this.addZoneIdAndNametoParams();
-    this.addNSToRootCSPzone();
+    this.addNSToRootCSPzone(props.configuration.subdomain);
 
     if (props.configuration.cnameRecords) {
       this.addCnameRecords(this.zone, props.configuration.cnameRecords);
@@ -56,12 +56,12 @@ export class DNSStack extends Stack {
    *
    * @returns null
    */
-  addNSToRootCSPzone() {
+  addNSToRootCSPzone(subdomain: string) {
     if (!this.zone.hostedZoneNameServers) { return; }
     new Route53.NsRecord(this, 'ns-record', {
       zone: this.accountRootZone,
       values: this.zone.hostedZoneNameServers,
-      recordName: 'yivi-issue',
+      recordName: subdomain,
     });
   }
 
