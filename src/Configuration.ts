@@ -13,6 +13,7 @@ export interface Environment extends CdkEnvironment {
 }
 
 export interface Configuration {
+  readonly deployFromEnvironment: Environment;
   readonly deployToEnvironment: Environment;
 
   /**
@@ -44,6 +45,12 @@ export interface Configuration {
    */
   readonly cnameRecords?: {[key: string]: string};
 
+  /**
+   * Add an IAM user with access key with full access rights to
+   * the S3 Bucket.
+   */
+  readonly iamUserAccess: boolean;
+
 }
 
 export function getConfiguration(branchName: string): Configuration {
@@ -56,12 +63,34 @@ export function getConfiguration(branchName: string): Configuration {
 const configurations: { [name: string] : Configuration } = {
   development: {
     branchName: 'development',
+    deployFromEnvironment: {
+      account: '836443378780',
+      region: 'eu-central-1',
+    },
     deployToEnvironment: {
       account: '598242258242',
       region: 'eu-central-1',
     },
     subdomain: 'componenten-dev',
     includePipelineValidationChecks: false,
+    iamUserAccess: false
+    // cnameRecords: {
+    //   _2efd09bc809f1129572f073cb0873936: '_37726a837615087fa929e1970e5ad7c2.hsmgrxbjqd.acm-validations.aws',
+    // },
+  },
+  sandbox: {
+    branchName: 'sandbox',
+    deployFromEnvironment: {
+      account: '418648875085',
+      region: 'eu-west-1',
+    },
+    deployToEnvironment: {
+      account: '122467643252',
+      region: 'eu-west-1',
+    },
+    subdomain: 'componenten-dev',
+    includePipelineValidationChecks: false,
+    iamUserAccess: true
     // cnameRecords: {
     //   _2efd09bc809f1129572f073cb0873936: '_37726a837615087fa929e1970e5ad7c2.hsmgrxbjqd.acm-validations.aws',
     // },
