@@ -2,8 +2,8 @@ import { Stack, StackProps } from 'aws-cdk-lib';
 import { Construct } from 'constructs';
 import { CloudfrontDistribution } from './CloudfrontDistribution';
 import { Configurable } from './Configuration';
-import { WebsiteBucket } from './WebsiteBucket';
 import { S3AccessUser } from './S3AccessUser';
+import { WebsiteBucket } from './WebsiteBucket';
 
 interface StaticWebsiteStackProps extends StackProps, Configurable {
 }
@@ -18,8 +18,8 @@ export class StaticWebsiteStack extends Stack {
       originConfig: bucket.s3OriginConfig,
       configuration: props.configuration,
     });
-    
-    if(props.configuration.iamUserAccess) {
+
+    if (props.configuration.iamUserAccess) {
       new S3AccessUser(this, 'user', { bucket: bucket.s3OriginConfig.s3BucketSource });
     }
   }

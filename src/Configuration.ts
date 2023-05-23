@@ -53,7 +53,7 @@ export interface Configuration {
 
   /**
    * The new landingzone has some specific requirements (the permissions
-   * boundary aspect for instance). If this is deploying to the old LZ, 
+   * boundary aspect for instance). If this is deploying to the old LZ,
    * set the flag:
    */
   readonly oldLandingZone?: boolean;
@@ -80,7 +80,7 @@ const configurations: { [name: string] : Configuration } = {
     },
     subdomain: 'componenten-dev',
     includePipelineValidationChecks: false,
-    iamUserAccess: false
+    iamUserAccess: false,
     // cnameRecords: {
     //   _2efd09bc809f1129572f073cb0873936: '_37726a837615087fa929e1970e5ad7c2.hsmgrxbjqd.acm-validations.aws',
     // },

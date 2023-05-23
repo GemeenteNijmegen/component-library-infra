@@ -14,6 +14,11 @@ const config: Configuration = {
   deployToEnvironment: snapshotEnv,
   includePipelineValidationChecks: false,
   subdomain: 'component-library-unittest',
+  deployFromEnvironment: {
+    account: '123',
+    region: 'et',
+  },
+  iamUserAccess: false,
 };
 
 test('Snapshot', () => {

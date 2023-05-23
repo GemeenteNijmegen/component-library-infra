@@ -2,9 +2,9 @@ import { PermissionsBoundaryAspect } from '@gemeentenijmegen/aws-constructs';
 import { Stack, StackProps, Tags, pipelines, CfnParameter, Stage, StageProps, Aspects } from 'aws-cdk-lib';
 import { Construct } from 'constructs';
 import { Configurable } from './Configuration';
+import { DNSStack } from './DNSStack';
 import { StaticWebsiteStack } from './StaticWebsiteStack';
 import { UsEastCertificateStack } from './UsEastCertificateStack';
-import { DNSStack } from './DNSStack';
 
 export interface PipelineStackProps extends StackProps, Configurable {
   projectName: string;
@@ -20,7 +20,7 @@ export class PipelineStack extends Stack {
     super(scope, id, props);
     Tags.of(this).add('cdkManaged', 'yes');
     Tags.of(this).add('Project', props.projectName);
-    if(!props.configuration.oldLandingZone) {
+    if (!props.configuration.oldLandingZone) {
       Aspects.of(this).add(new PermissionsBoundaryAspect());
     }
     this.branchName = props.branchName;
@@ -74,7 +74,7 @@ class StaticWebsiteStage extends Stage {
   constructor(scope: Construct, id: string, props: StaticWebsiteStageProps) {
     super(scope, id, props);
 
-    if(!props.configuration.oldLandingZone) {
+    if (!props.configuration.oldLandingZone) {
       Aspects.of(this).add(new PermissionsBoundaryAspect());
     }
 
