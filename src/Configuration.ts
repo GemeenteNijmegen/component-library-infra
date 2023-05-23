@@ -51,6 +51,13 @@ export interface Configuration {
    */
   readonly iamUserAccess: boolean;
 
+  /**
+   * The new landingzone has some specific requirements (the permissions
+   * boundary aspect for instance). If this is deploying to the old LZ, 
+   * set the flag:
+   */
+  readonly oldLandingZone?: boolean;
+
 }
 
 export function getConfiguration(branchName: string): Configuration {
@@ -90,7 +97,8 @@ const configurations: { [name: string] : Configuration } = {
     },
     subdomain: 'componenten-dev',
     includePipelineValidationChecks: false,
-    iamUserAccess: true
+    iamUserAccess: true,
+    oldLandingZone: true,
     // cnameRecords: {
     //   _2efd09bc809f1129572f073cb0873936: '_37726a837615087fa929e1970e5ad7c2.hsmgrxbjqd.acm-validations.aws',
     // },

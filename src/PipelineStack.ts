@@ -20,7 +20,9 @@ export class PipelineStack extends Stack {
     super(scope, id, props);
     Tags.of(this).add('cdkManaged', 'yes');
     Tags.of(this).add('Project', props.projectName);
-    Aspects.of(this).add(new PermissionsBoundaryAspect());
+    if(!props.configuration.oldLandingZone) {
+      Aspects.of(this).add(new PermissionsBoundaryAspect());
+    }
     this.branchName = props.branchName;
     this.projectName = props.projectName;
     this.repository = props.repository;
@@ -72,7 +74,9 @@ class StaticWebsiteStage extends Stage {
   constructor(scope: Construct, id: string, props: StaticWebsiteStageProps) {
     super(scope, id, props);
 
-    Aspects.of(this).add(new PermissionsBoundaryAspect());
+    if(!props.configuration.oldLandingZone) {
+      Aspects.of(this).add(new PermissionsBoundaryAspect());
+    }
 
     const dnsStack = new DNSStack(this, 'dns', { configuration: props.configuration });
 
