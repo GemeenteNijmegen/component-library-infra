@@ -21,6 +21,7 @@ export class S3AccessUser extends Construct {
     const s3SingleBucketAccess = this.s3AccessPolicy(props.bucket);
 
     const user = this.user(s3SingleBucketAccess);
+    props.bucket.grantReadWrite(user);
     this.addAccessKey(user);
   }
 
