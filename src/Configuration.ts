@@ -80,7 +80,7 @@ const configurations: { [name: string] : Configuration } = {
     },
     subdomain: 'componenten-dev',
     includePipelineValidationChecks: false,
-    iamUserAccess: false,
+    iamUserAccess: true,
     // cnameRecords: {
     //   _2efd09bc809f1129572f073cb0873936: '_37726a837615087fa929e1970e5ad7c2.hsmgrxbjqd.acm-validations.aws',
     // },
