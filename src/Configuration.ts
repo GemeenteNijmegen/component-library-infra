@@ -46,12 +46,6 @@ export interface Configuration {
   readonly cnameRecords?: {[key: string]: string};
 
   /**
-   * Add an IAM user with access key with full access rights to
-   * the S3 Bucket.
-   */
-  readonly iamUserAccess: boolean;
-
-  /**
    * The new landingzone has some specific requirements (the permissions
    * boundary aspect for instance). If this is deploying to the old LZ,
    * set the flag:
@@ -80,10 +74,19 @@ const configurations: { [name: string] : Configuration } = {
     },
     subdomain: 'componenten-dev',
     includePipelineValidationChecks: false,
-    iamUserAccess: true,
-    // cnameRecords: {
-    //   _2efd09bc809f1129572f073cb0873936: '_37726a837615087fa929e1970e5ad7c2.hsmgrxbjqd.acm-validations.aws',
-    // },
+  },
+  acceptance: {
+    branchName: 'acceptance',
+    deployFromEnvironment: {
+      account: '836443378780',
+      region: 'eu-central-1',
+    },
+    deployToEnvironment: {
+      account: '768900902886',
+      region: 'eu-central-1',
+    },
+    subdomain: 'componenten-accp',
+    includePipelineValidationChecks: false,
   },
   sandbox: {
     branchName: 'sandbox',
@@ -97,10 +100,6 @@ const configurations: { [name: string] : Configuration } = {
     },
     subdomain: 'componenten-dev',
     includePipelineValidationChecks: false,
-    iamUserAccess: true,
     oldLandingZone: true,
-    // cnameRecords: {
-    //   _2efd09bc809f1129572f073cb0873936: '_37726a837615087fa929e1970e5ad7c2.hsmgrxbjqd.acm-validations.aws',
-    // },
   },
 };

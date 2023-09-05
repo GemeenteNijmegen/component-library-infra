@@ -19,8 +19,6 @@ export class StaticWebsiteStack extends Stack {
       configuration: props.configuration,
     });
 
-    if (props.configuration.iamUserAccess) {
-      new S3AccessUser(this, 'user', { bucket: bucket.s3OriginConfig.s3BucketSource });
-    }
+    new S3AccessUser(this, 'user', { bucket: bucket.s3OriginConfig.s3BucketSource });
   }
 }
