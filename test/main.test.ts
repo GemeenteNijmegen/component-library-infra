@@ -18,7 +18,6 @@ const config: Configuration = {
     account: '123',
     region: 'et',
   },
-  iamUserAccess: false,
 };
 
 test('Snapshot', () => {
