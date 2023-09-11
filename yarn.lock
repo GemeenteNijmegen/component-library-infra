@@ -1710,10 +1710,10 @@ case@1.6.3, case@^1.6.3:
   resolved "https://registry.yarnpkg.com/case/-/case-1.6.3.tgz#0a4386e3e9825351ca2e6216c60467ff5f1ea1c9"
   integrity sha512-mzDSXIPaFwVDvZAHqZ9VlbyF4yyXRuX6IvB06WvPYkqJVO24kX1PPhv9bfpKNFZyxYFmmgo03HUiD8iklmJYRQ==
 
-cdk-remote-stack@^2.0.63:
-  version "2.0.63"
-  resolved "https://registry.yarnpkg.com/cdk-remote-stack/-/cdk-remote-stack-2.0.63.tgz#fcec9843fc87db20af717c349d301b8f12c87f67"
-  integrity sha512-oaBIL2kbbJFhSPJTOMPbHQP0ABH9qDaFESlbdVLKa3tcIat5sCB+CGrkUjxoE9xbYrQBW+3zcgd7y/MLXi+1/A==
+cdk-remote-stack@^2.0.64:
+  version "2.0.64"
+  resolved "https://registry.yarnpkg.com/cdk-remote-stack/-/cdk-remote-stack-2.0.64.tgz#13db8528c54af556b4d86d951cbeee7960506194"
+  integrity sha512-fQ2B943+ORwMZEd92D/4Q3XgnzQo1ROtiIgXdUyL6goRaBvUXHv58dpj0g+tS53qXXyGm+CQESQUpB+SKgGvPQ==
 
 chalk@^2.4.2:
   version "2.4.2"
