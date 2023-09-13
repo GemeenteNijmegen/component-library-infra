@@ -39,7 +39,7 @@
     "eslint-import-resolver-node": "^0.3.9",
     "eslint-import-resolver-typescript": "^3.6.0",
     "eslint-plugin-import": "^2.28.1",
-    "jest": "^29.6.4",
+    "jest": "^29.7.0",
     "jest-junit": "^15",
     "npm-check-updates": "^16",
     "projen": "^0.73.8",
@@ -51,7 +51,7 @@
   "dependencies": {
     "@gemeentenijmegen/aws-constructs": "^0.0.4",
     "aws-cdk-lib": "^2.1.0",
-    "cdk-remote-stack": "^2.0.64",
+    "cdk-remote-stack": "^2.0.65",
     "constructs": "^10.0.5"
   },
   "license": "EUPL-1.2",
