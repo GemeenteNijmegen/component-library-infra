@@ -14,6 +14,7 @@ export abstract class Statics {
   static readonly ssmZonePath: string = `/${this.projectName}/zone`;
   static readonly ssmZoneId: string = `/${this.projectName}/zone/id`;
   static readonly ssmZoneName: string = `/${this.projectName}/zone/name`;
+  static readonly ssmAccountDnsSecKmsKey: string = '/gemeente-nijmegen/account/dnssec/kmskey/arn';
 
 
   static readonly accountRootHostedZonePath: string = '/gemeente-nijmegen/account/hostedzone';
