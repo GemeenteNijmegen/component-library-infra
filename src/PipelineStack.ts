@@ -2,6 +2,7 @@ import { PermissionsBoundaryAspect } from '@gemeentenijmegen/aws-constructs';
 import { Stack, StackProps, Tags, pipelines, CfnParameter, Stage, StageProps, Aspects } from 'aws-cdk-lib';
 import { Construct } from 'constructs';
 import { Configurable } from './Configuration';
+import { DNSSECStack } from './DNSSECStack';
 import { DNSStack } from './DNSStack';
 import { StaticWebsiteStack } from './StaticWebsiteStack';
 import { UsEastCertificateStack } from './UsEastCertificateStack';
@@ -76,6 +77,12 @@ class StaticWebsiteStage extends Stage {
 
     const dnsStack = new DNSStack(this, 'dns', { configuration: props.configuration });
 
+    const dnssecStack = new DNSSECStack(this, 'dnssec-stack', {
+      env: { region: 'us-east-1' },
+      configuration: props.configuration,
+    });
+
+    dnssecStack.addDependency(dnsStack);
     const staticWebsiteStack = new StaticWebsiteStack(this, 'site', { env: props.env, configuration: props.configuration });
 
     const certStack = new UsEastCertificateStack(this, 'cert-stack', {
