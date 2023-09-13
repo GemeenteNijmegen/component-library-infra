@@ -44,7 +44,7 @@ export class DNSSECStack extends Stack {
     // KSK
     const accountDnssecKmsKeyArn = SSM.StringParameter.valueForStringParameter(this, Statics.ssmAccountDnsSecKmsKey);
     const dnssecKeySigning = new Route53.CfnKeySigningKey(this, 'dnssec-keysigning-key', {
-      name: 'yivi_issue_ksk',
+      name: 'app_ksk',
       status: 'ACTIVE',
       hostedZoneId: hostedZone.hostedZoneId,
       keyManagementServiceArn: accountDnssecKmsKeyArn,
