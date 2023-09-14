@@ -2,6 +2,7 @@ import { PermissionsBoundaryAspect } from '@gemeentenijmegen/aws-constructs';
 import { Stack, StackProps, Tags, pipelines, CfnParameter, Stage, StageProps, Aspects } from 'aws-cdk-lib';
 import { Construct } from 'constructs';
 import { Configurable } from './Configuration';
+import { DNSSECStack } from './DNSSECStack';
 import { DNSStack } from './DNSStack';
 import { StaticWebsiteStack } from './StaticWebsiteStack';
 import { UsEastCertificateStack } from './UsEastCertificateStack';
@@ -20,9 +21,8 @@ export class PipelineStack extends Stack {
     super(scope, id, props);
     Tags.of(this).add('cdkManaged', 'yes');
     Tags.of(this).add('Project', props.projectName);
-    if (!props.configuration.oldLandingZone) {
-      Aspects.of(this).add(new PermissionsBoundaryAspect());
-    }
+    Aspects.of(this).add(new PermissionsBoundaryAspect());
+
     this.branchName = props.branchName;
     this.projectName = props.projectName;
     this.repository = props.repository;
@@ -73,13 +73,16 @@ interface StaticWebsiteStageProps extends StageProps, Configurable {}
 class StaticWebsiteStage extends Stage {
   constructor(scope: Construct, id: string, props: StaticWebsiteStageProps) {
     super(scope, id, props);
-
-    if (!props.configuration.oldLandingZone) {
-      Aspects.of(this).add(new PermissionsBoundaryAspect());
-    }
+    Aspects.of(this).add(new PermissionsBoundaryAspect());
 
     const dnsStack = new DNSStack(this, 'dns', { configuration: props.configuration });
 
+    const dnssecStack = new DNSSECStack(this, 'dnssec-stack', {
+      env: { region: 'us-east-1' },
+      configuration: props.configuration,
+    });
+
+    dnssecStack.addDependency(dnsStack);
     const staticWebsiteStack = new StaticWebsiteStack(this, 'site', { env: props.env, configuration: props.configuration });
 
     const certStack = new UsEastCertificateStack(this, 'cert-stack', {

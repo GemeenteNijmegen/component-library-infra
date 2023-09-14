@@ -45,29 +45,37 @@ export interface Configuration {
    */
   readonly cnameRecords?: {[key: string]: string};
 
-  /**
-   * The new landingzone has some specific requirements (the permissions
-   * boundary aspect for instance). If this is deploying to the old LZ,
-   * set the flag:
-   */
-  readonly oldLandingZone?: boolean;
-
 }
 
+/**
+ * Get a configuration object, based on the branchName you provide
+ *
+ * Checks the configurations object for a configuration with the 'branchName' key
+ * matching the provided branch.
+ *
+ * @param branchName the branchName you're deploying
+ * @returns the configuration object for the branhc
+ */
 export function getConfiguration(branchName: string): Configuration {
-  if (Object.keys(configurations).includes(branchName)) {
-    return configurations[branchName];
+  const configName = Object.keys(configurations).find((configurationName) => {
+    const config = configurations[configurationName];
+    return config.branchName == branchName;
+  });
+  if (configName) {
+    return configurations[configName];
   }
   throw Error(`No configuration found for branch name ${branchName}`);
 }
 
+const deploymentEnvironment = {
+  account: '836443378780',
+  region: 'eu-central-1',
+};
+
 const configurations: { [name: string] : Configuration } = {
   development: {
     branchName: 'development',
-    deployFromEnvironment: {
-      account: '836443378780',
-      region: 'eu-central-1',
-    },
+    deployFromEnvironment: deploymentEnvironment,
     deployToEnvironment: {
       account: '598242258242',
       region: 'eu-central-1',
@@ -77,10 +85,7 @@ const configurations: { [name: string] : Configuration } = {
   },
   acceptance: {
     branchName: 'acceptance',
-    deployFromEnvironment: {
-      account: '836443378780',
-      region: 'eu-central-1',
-    },
+    deployFromEnvironment: deploymentEnvironment,
     deployToEnvironment: {
       account: '768900902886',
       region: 'eu-central-1',
@@ -88,18 +93,14 @@ const configurations: { [name: string] : Configuration } = {
     subdomain: 'componenten-accp',
     includePipelineValidationChecks: false,
   },
-  sandbox: {
-    branchName: 'sandbox',
-    deployFromEnvironment: {
-      account: '418648875085',
-      region: 'eu-west-1',
-    },
+  production: {
+    branchName: 'main',
+    deployFromEnvironment: deploymentEnvironment,
     deployToEnvironment: {
-      account: '122467643252',
-      region: 'eu-west-1',
+      account: '706611162248',
+      region: 'eu-central-1',
     },
-    subdomain: 'componenten-dev',
+    subdomain: 'componenten',
     includePipelineValidationChecks: false,
-    oldLandingZone: true,
   },
 };
