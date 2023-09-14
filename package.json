@@ -51,7 +51,7 @@
   "dependencies": {
     "@gemeentenijmegen/aws-constructs": "^0.0.4",
     "aws-cdk-lib": "^2.1.0",
-    "cdk-remote-stack": "^2.0.65",
+    "cdk-remote-stack": "^2.0.66",
     "constructs": "^10.0.5"
   },
   "license": "EUPL-1.2",
