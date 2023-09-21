@@ -1,7 +1,7 @@
 import path from 'path';
 import { Duration, Environment, aws_ssm } from 'aws-cdk-lib';
 import { Certificate } from 'aws-cdk-lib/aws-certificatemanager';
-import { Distribution, Function, FunctionCode, FunctionEventType, PriceClass, S3OriginConfig, SecurityPolicyProtocol, ViewerProtocolPolicy } from 'aws-cdk-lib/aws-cloudfront';
+import { CachePolicy, Distribution, Function, FunctionCode, FunctionEventType, HeadersFrameOption, HeadersReferrerPolicy, PriceClass, ResponseHeadersPolicy, S3OriginConfig, SecurityPolicyProtocol, ViewerProtocolPolicy } from 'aws-cdk-lib/aws-cloudfront';
 import { S3Origin } from 'aws-cdk-lib/aws-cloudfront-origins';
 import { AaaaRecord, ARecord, HostedZone, RecordTarget } from 'aws-cdk-lib/aws-route53';
 import { CloudFrontTarget } from 'aws-cdk-lib/aws-route53-targets';
@@ -35,6 +35,8 @@ export class CloudfrontDistribution extends Construct {
         origin: new S3Origin(props.bucket, { originAccessIdentity: props.originConfig.originAccessIdentity }),
         viewerProtocolPolicy: ViewerProtocolPolicy.REDIRECT_TO_HTTPS,
         functionAssociations: [{ eventType: FunctionEventType.VIEWER_REQUEST, function: this.indexRewriteFunction() }],
+        responseHeadersPolicy: this.responseHeadersPolicy(),
+        cachePolicy: CachePolicy.CACHING_OPTIMIZED,
       },
       logBucket: this.logBucket(),
       minimumProtocolVersion: SecurityPolicyProtocol.TLS_V1_2_2021,
@@ -120,5 +122,43 @@ export class CloudfrontDistribution extends Construct {
       target: RecordTarget.fromAlias(new CloudFrontTarget(distribution)),
       recordName: `www.${zone.zoneName}`,
     });
+  }
+
+  /**
+   * Get a set of (security) response headers to inject into the response
+   * @returns {ResponseHeadersPolicy} cloudfront responseHeadersPolicy
+   */
+  responseHeadersPolicy(): ResponseHeadersPolicy {
+
+    const responseHeadersPolicy = new ResponseHeadersPolicy(this, 'headers', {
+      securityHeadersBehavior: {
+        contentSecurityPolicy: { contentSecurityPolicy: this.cspHeaderValue(), override: true },
+        contentTypeOptions: { override: true },
+        frameOptions: { frameOption: HeadersFrameOption.DENY, override: true },
+        referrerPolicy: { referrerPolicy: HeadersReferrerPolicy.NO_REFERRER, override: true },
+        strictTransportSecurity: { accessControlMaxAge: Duration.days(366), includeSubdomains: true, override: true },
+      },
+    });
+    return responseHeadersPolicy;
+  }
+
+  /**
+   * Get the cleaned, trimmed header values for the csp header
+   *
+   * @returns string csp header values
+   */
+  cspHeaderValue() {
+    const cspValues = [
+      'default-src \'self\';',
+      'frame-ancestors \'self\';',
+      'frame-src \'self\';',
+      `connect-src \'self\'`,
+      'style-src \'self\' https://fonts.googleapis.com https://fonts.gstatic.com',
+      'script-src \'self\' https://siteimproveanalytics.com;',
+      'font-src \'self\' https://fonts.gstatic.com;',
+      'img-src \'self\' data: https://*.siteimproveanalytics.io;',
+      'object-src \'none\';',
+    ].join(' ');
+    return cspValues.replace(/[ ]+/g, ' ').trim();
   }
 }
