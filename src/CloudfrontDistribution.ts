@@ -149,7 +149,7 @@ export class CloudfrontDistribution extends Construct {
    */
   cspHeaderValue() {
     const cspValues = [
-      'base-uri \'self\'',
+      'base-uri \'self\';',
       'default-src \'self\';',
       'frame-ancestors \'self\';',
       'frame-src \'self\';',
