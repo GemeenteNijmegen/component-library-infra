@@ -149,10 +149,12 @@ export class CloudfrontDistribution extends Construct {
    */
   cspHeaderValue() {
     const cspValues = [
+      'base-uri \'self\'',
       'default-src \'self\';',
       'frame-ancestors \'self\';',
       'frame-src \'self\';',
       `connect-src \'self\'`,
+      'form-action \'self\'',
       'style-src \'self\' https://fonts.googleapis.com https://fonts.gstatic.com',
       'script-src \'self\' https://siteimproveanalytics.com;',
       'font-src \'self\' https://fonts.gstatic.com;',
