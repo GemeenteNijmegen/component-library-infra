@@ -52,7 +52,7 @@
     "@gemeentenijmegen/aws-constructs": "^0.0.4",
     "@gemeentenijmegen/dnssec-record": "^0.0.7",
     "aws-cdk-lib": "^2.1.0",
-    "cdk-remote-stack": "^2.0.72",
+    "cdk-remote-stack": "^2.0.73",
     "constructs": "^10.0.5"
   },
   "license": "EUPL-1.2",
