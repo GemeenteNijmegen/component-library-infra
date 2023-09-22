@@ -91,6 +91,7 @@ const configurations: { [name: string] : Configuration } = {
       region: 'eu-central-1',
     },
     subdomain: 'componenten-accp',
+    alternativeDomains: ['componenten.acc.nijmegen.nl'],
     includePipelineValidationChecks: false,
   },
   production: {
