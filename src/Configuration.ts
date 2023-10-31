@@ -102,6 +102,7 @@ const configurations: { [name: string] : Configuration } = {
       region: 'eu-central-1',
     },
     subdomain: 'componenten',
+    alternativeDomains: ['componenten.nijmegen.nl'],
     includePipelineValidationChecks: false,
   },
 };
