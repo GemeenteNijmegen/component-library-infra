@@ -165,7 +165,7 @@ export class CloudfrontDistribution extends Construct {
       'connect-src \'self\';',
       'form-action \'self\';',
       'style-src \'unsafe-inline\' \'self\' https://fonts.googleapis.com https://fonts.gstatic.com;',
-      'script-src \'self\' https://siteimproveanalytics.com;',
+      'script-src \'unsafe-inline\' \'self\' https://siteimproveanalytics.com;',
       'font-src \'self\' https://fonts.gstatic.com;',
       'img-src \'self\' data: https://*.siteimproveanalytics.io;',
       'object-src \'none\';',
