@@ -138,6 +138,15 @@ export class CloudfrontDistribution extends Construct {
         referrerPolicy: { referrerPolicy: HeadersReferrerPolicy.NO_REFERRER, override: true },
         strictTransportSecurity: { accessControlMaxAge: Duration.days(366), includeSubdomains: true, override: true },
       },
+      corsBehavior: {
+        accessControlAllowMethods: ['GET'],
+        accessControlAllowOrigins: ['*'],
+        accessControlAllowCredentials: false,
+        accessControlAllowHeaders: ['*'],
+        accessControlExposeHeaders: ['*'],
+        accessControlMaxAge: Duration.seconds(0),
+        originOverride: true,
+      },
     });
     return responseHeadersPolicy;
   }
