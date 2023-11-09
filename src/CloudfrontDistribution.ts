@@ -55,7 +55,7 @@ export class CloudfrontDistribution extends Construct {
     const parameters = new RemoteParameters(this, 'params', {
       path: `${Statics.certificatePath}/`,
       region: 'us-east-1',
-      alwaysUpdate: false,
+      alwaysUpdate: true,
     });
     const certificateArn = parameters.get(Statics.certificateArn);
     return certificateArn;
