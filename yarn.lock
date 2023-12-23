@@ -1468,15 +1468,15 @@
     tslib "^2.5.0"
 
 "@smithy/core@^1.2.0":
-  version "1.2.0"
-  resolved "https://registry.yarnpkg.com/@smithy/core/-/core-1.2.0.tgz#36286de5460905708221313b8b1faebf185761e6"
-  integrity sha512-l8R89X7+hlt2FEFg+OrNq29LP3h9DfGPmO6ObwT9IXWHD6V7ycpj5u2rVQyIis26ovrgOYakl6nfgmPMm8m1IQ==
+  version "1.2.1"
+  resolved "https://registry.yarnpkg.com/@smithy/core/-/core-1.2.1.tgz#2ee9b9894f3b2ce5eac4010ea1a85874b446f203"
+  integrity sha512-f6cwmMuHo7RIw/c184NBd2rGeGvGIX6p55HSrG5jfR3qkNYo80PHRfhzkJMq1+mv1ZjI5p8NhenWMMkIRJR4tw==
   dependencies:
     "@smithy/middleware-endpoint" "^2.2.3"
-    "@smithy/middleware-retry" "^2.0.24"
+    "@smithy/middleware-retry" "^2.0.25"
     "@smithy/middleware-serde" "^2.0.15"
     "@smithy/protocol-http" "^3.0.11"
-    "@smithy/smithy-client" "^2.1.18"
+    "@smithy/smithy-client" "^2.2.0"
     "@smithy/types" "^2.7.0"
     "@smithy/util-middleware" "^2.0.8"
     tslib "^2.5.0"
@@ -1560,15 +1560,15 @@
     "@smithy/util-middleware" "^2.0.8"
     tslib "^2.5.0"
 
-"@smithy/middleware-retry@^2.0.24":
-  version "2.0.24"
-  resolved "https://registry.yarnpkg.com/@smithy/middleware-retry/-/middleware-retry-2.0.24.tgz#556a39e7d2be32cc61862e020409d3f93e2c5be1"
-  integrity sha512-q2SvHTYu96N7lYrn3VSuX3vRpxXHR/Cig6MJpGWxd0BWodUQUWlKvXpWQZA+lTaFJU7tUvpKhRd4p4MU3PbeJg==
+"@smithy/middleware-retry@^2.0.24", "@smithy/middleware-retry@^2.0.25":
+  version "2.0.25"
+  resolved "https://registry.yarnpkg.com/@smithy/middleware-retry/-/middleware-retry-2.0.25.tgz#ae948f4a1ad5968bc315f07df930a55c09ffe040"
+  integrity sha512-FXhafCPvx/9L9OgHJ3cdo/pD1f7ngC7DKsjDV2J7k6LO/Yl69POoBLk4sI1OZPUGc4dfxriENlTma9Nj1hI+IQ==
   dependencies:
     "@smithy/node-config-provider" "^2.1.8"
     "@smithy/protocol-http" "^3.0.11"
     "@smithy/service-error-classification" "^2.0.8"
-    "@smithy/smithy-client" "^2.1.18"
+    "@smithy/smithy-client" "^2.2.0"
     "@smithy/types" "^2.7.0"
     "@smithy/util-middleware" "^2.0.8"
     "@smithy/util-retry" "^2.0.8"
@@ -1674,12 +1674,14 @@
     "@smithy/util-utf8" "^2.0.2"
     tslib "^2.5.0"
 
-"@smithy/smithy-client@^2.1.18":
-  version "2.1.18"
-  resolved "https://registry.yarnpkg.com/@smithy/smithy-client/-/smithy-client-2.1.18.tgz#f8ce2c0e9614f207256ddcd992403aff40750546"
-  integrity sha512-7FqdbaJiVaHJDD9IfDhmzhSDbpjyx+ZsfdYuOpDJF09rl8qlIAIlZNoSaflKrQ3cEXZN2YxGPaNWGhbYimyIRQ==
+"@smithy/smithy-client@^2.1.18", "@smithy/smithy-client@^2.2.0":
+  version "2.2.0"
+  resolved "https://registry.yarnpkg.com/@smithy/smithy-client/-/smithy-client-2.2.0.tgz#9865981a2f49dd0e9ef68193aebcd5654cdd7f00"
+  integrity sha512-C/bkNue5H5Obgl83SnlBt4v6VM68CqIjIELh3vAabud87xFYznLNKtj6Qb69Z+QOnLp9T+We++sEem/f2AHE+Q==
   dependencies:
+    "@smithy/middleware-endpoint" "^2.2.3"
     "@smithy/middleware-stack" "^2.0.9"
+    "@smithy/protocol-http" "^3.0.11"
     "@smithy/types" "^2.7.0"
     "@smithy/util-stream" "^2.0.23"
     tslib "^2.5.0"
@@ -1738,26 +1740,26 @@
     tslib "^2.5.0"
 
 "@smithy/util-defaults-mode-browser@^2.0.22":
-  version "2.0.22"
-  resolved "https://registry.yarnpkg.com/@smithy/util-defaults-mode-browser/-/util-defaults-mode-browser-2.0.22.tgz#8ef8c36b8c3c2f98f7a62278c3c684d659134269"
-  integrity sha512-qcF20IHHH96FlktvBRICDXDhLPtpVmtksHmqNGtotb9B0DYWXsC6jWXrkhrrwF7tH26nj+npVTqh9isiFV1gdA==
+  version "2.0.23"
+  resolved "https://registry.yarnpkg.com/@smithy/util-defaults-mode-browser/-/util-defaults-mode-browser-2.0.23.tgz#27bce42b7a55974ed4aff5b2b870256ce383613a"
+  integrity sha512-2u+7t7Wgz1jlfsf6il3pz6DIzyJHS3qrnNnmATICm00pQeqp2D4kUOYauOgKGIeKgVpwzzq8+hFQe749r3xR5w==
   dependencies:
     "@smithy/property-provider" "^2.0.16"
-    "@smithy/smithy-client" "^2.1.18"
+    "@smithy/smithy-client" "^2.2.0"
     "@smithy/types" "^2.7.0"
     bowser "^2.11.0"
     tslib "^2.5.0"
 
 "@smithy/util-defaults-mode-node@^2.0.29":
-  version "2.0.29"
-  resolved "https://registry.yarnpkg.com/@smithy/util-defaults-mode-node/-/util-defaults-mode-node-2.0.29.tgz#6b210aede145a6bf4bd83d9f465948fb300ca577"
-  integrity sha512-+uG/15VoUh6JV2fdY9CM++vnSuMQ1VKZ6BdnkUM7R++C/vLjnlg+ToiSR1FqKZbMmKBXmsr8c/TsDWMAYvxbxQ==
+  version "2.0.30"
+  resolved "https://registry.yarnpkg.com/@smithy/util-defaults-mode-node/-/util-defaults-mode-node-2.0.30.tgz#12c4c737a9f8b151cfbd951348cdf94febd083dd"
+  integrity sha512-nmcmEyRlClNprp7mBnUzfmW6HrKQK+yvl+cyXCRUoQSxRvZuLDrztV+JD+zr3qV/oirEc4Q0QNIrrhTDCE6JeA==
   dependencies:
     "@smithy/config-resolver" "^2.0.21"
     "@smithy/credential-provider-imds" "^2.1.4"
     "@smithy/node-config-provider" "^2.1.8"
     "@smithy/property-provider" "^2.0.16"
-    "@smithy/smithy-client" "^2.1.18"
+    "@smithy/smithy-client" "^2.2.0"
     "@smithy/types" "^2.7.0"
     tslib "^2.5.0"
 
@@ -2353,9 +2355,9 @@ available-typed-arrays@^1.0.5:
   integrity sha512-DMD0KiN46eipeziST1LPP/STfDU0sufISXmjSgvVsoU2tqxctQeASejWcfNtxYKqETM1UxQ8sp2OrSBWpHY6sw==
 
 aws-cdk-lib@^2.1.0:
-  version "2.115.0"
-  resolved "https://registry.yarnpkg.com/aws-cdk-lib/-/aws-cdk-lib-2.115.0.tgz#6f0b9b303c334d233b670ca145894c30b1bf1f52"
-  integrity sha512-PGIwmjo9BcviKxuMfMlUCwevUjwXnaS5h8fxZOM6bN1HXCS/wIusft4tMmkiNYjPiNE1sHJbCDIbxxntCQ/7jg==
+  version "2.116.1"
+  resolved "https://registry.yarnpkg.com/aws-cdk-lib/-/aws-cdk-lib-2.116.1.tgz#4810ae231b1b87332a158b0b15a7d85dd5bc9b02"
+  integrity sha512-3j9kUHZFp/Jl79utnsBB2xW2u+sNfjpliQtTPQlW0i7J12oxjD2rHU4AJV741cKMxnA9VrHnRyJF9NTryji8yw==
   dependencies:
     "@aws-cdk/asset-awscli-v1" "^2.2.201"
     "@aws-cdk/asset-kubectl-v20" "^2.1.2"
@@ -2372,9 +2374,9 @@ aws-cdk-lib@^2.1.0:
     yaml "1.10.2"
 
 aws-cdk@^2.1.0:
-  version "2.115.0"
-  resolved "https://registry.yarnpkg.com/aws-cdk/-/aws-cdk-2.115.0.tgz#a838f4edb6ba2b7c9dff99df4990f7c0e99aea3d"
-  integrity sha512-jf+5j+ygk/DqxLzYyjFnCOOlRgvL/fwcYhyanhpb1OEQEe1FF6NGUb1TYsnQc3Ly67qLOKkQgdeyeXgzkKoSOQ==
+  version "2.116.1"
+  resolved "https://registry.yarnpkg.com/aws-cdk/-/aws-cdk-2.116.1.tgz#6790227e6e5015a18efe5fab859a235093a1de7a"
+  integrity sha512-NBEoLPHHnQxu7QKFf4DlAy737v1Jnsvy6ueM1r8jc/GGr3h0Mm9yD2t4cs3KlcHYM0qNESfQW0SVUMJ5aDCARQ==
   optionalDependencies:
     fsevents "2.3.2"
 
