@@ -162,7 +162,7 @@ export class CloudfrontDistribution extends Construct {
       'default-src \'self\';',
       'frame-ancestors \'self\';',
       'frame-src \'self\';',
-      'connect-src \'self\';',
+      'connect-src \'self\' https://public.pandosearch.com;',
       'form-action \'self\';',
       'style-src \'unsafe-inline\' \'self\' https://fonts.googleapis.com https://fonts.gstatic.com;',
       'script-src \'unsafe-inline\' \'self\' https://siteimproveanalytics.com;',
