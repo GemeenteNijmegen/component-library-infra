@@ -28,7 +28,7 @@
     "projen": "npx projen"
   },
   "devDependencies": {
-    "@gemeentenijmegen/projen-project-type": "^1.5.6",
+    "@gemeentenijmegen/projen-project-type": "^1.5.7",
     "@types/jest": "^29.5.12",
     "@types/node": "^18",
     "@typescript-eslint/eslint-plugin": "^6",
@@ -47,7 +47,7 @@
     "typescript": "^5.4.4"
   },
   "dependencies": {
-    "@gemeentenijmegen/aws-constructs": "^0.0.5",
+    "@gemeentenijmegen/aws-constructs": "^0.0.6",
     "@gemeentenijmegen/dnssec-record": "^0.0.8",
     "aws-cdk-lib": "^2.1.0",
     "cdk-remote-stack": "^2.0.101",
