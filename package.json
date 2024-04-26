@@ -47,7 +47,7 @@
     "typescript": "^5.4.5"
   },
   "dependencies": {
-    "@gemeentenijmegen/aws-constructs": "^0.0.8",
+    "@gemeentenijmegen/aws-constructs": "^0.0.9",
     "@gemeentenijmegen/dnssec-record": "^0.0.8",
     "aws-cdk-lib": "^2.1.0",
     "cdk-remote-stack": "^2.0.101",
