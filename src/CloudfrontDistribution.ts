@@ -168,7 +168,7 @@ export class CloudfrontDistribution extends Construct {
       'style-src \'unsafe-inline\' \'self\' https://fonts.googleapis.com https://fonts.gstatic.com;',
       'script-src \'unsafe-inline\' \'self\' https://siteimproveanalytics.com;',
       'font-src \'self\' https://fonts.gstatic.com;',
-      'img-src \'self\' data: https://*.siteimproveanalytics.io;',
+      'img-src \'self\' https://mdbootstrap.com data: https://*.siteimproveanalytics.io;',
       'object-src \'none\';',
     ].join(' ');
     return cspValues.replace(/[ ]+/g, ' ').trim();
