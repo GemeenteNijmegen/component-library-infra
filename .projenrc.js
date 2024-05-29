@@ -4,7 +4,12 @@ const project = new GemeenteNijmegenCdkApp({
   defaultReleaseBranch: 'main',
   devDeps: ['@gemeentenijmegen/projen-project-type'],
   name: 'component-library-infra',
-
+  depsUpgradeOptions: {
+    workflowOptions: {
+      branches: ['development'],
+      labels: ['auto-merge'],
+    },
+  },
   deps: [
     'cdk-remote-stack',
     '@gemeentenijmegen/aws-constructs',
