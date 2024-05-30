@@ -91,7 +91,7 @@ const configurations: { [name: string] : Configuration } = {
       region: 'eu-central-1',
     },
     subdomain: 'componenten-accp',
-    alternativeDomains: ['componenten.acc.nijmegen.nl'],
+    alternativeDomains: ['componenten.acc.nijmegen.nl', 'componenten-accp.csp2-nijmegen.nl'],
     includePipelineValidationChecks: false,
   },
   production: {
@@ -102,7 +102,7 @@ const configurations: { [name: string] : Configuration } = {
       region: 'eu-central-1',
     },
     subdomain: 'componenten',
-    alternativeDomains: ['componenten.nijmegen.nl'],
+    alternativeDomains: ['componenten.nijmegen.nl', 'componenten-prod.csp2-nijmegen.nl'],
     includePipelineValidationChecks: false,
   },
 };
