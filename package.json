@@ -36,7 +36,7 @@
     "aws-cdk": "^2.1.0",
     "esbuild": "^0.23.1",
     "eslint": "^8",
-    "eslint-import-resolver-typescript": "^3.6.1",
+    "eslint-import-resolver-typescript": "^3.6.3",
     "eslint-plugin-import": "^2.29.1",
     "jest": "^29.7.0",
     "jest-junit": "^15",
@@ -47,8 +47,8 @@
     "typescript": "^5.5.4"
   },
   "dependencies": {
-    "@gemeentenijmegen/aws-constructs": "^0.0.16",
-    "@gemeentenijmegen/dnssec-record": "^0.0.18",
+    "@gemeentenijmegen/aws-constructs": "^0.0.17",
+    "@gemeentenijmegen/dnssec-record": "^0.0.19",
     "aws-cdk-lib": "^2.1.0",
     "cdk-remote-stack": "^2.1.0",
     "constructs": "^10.0.5"
