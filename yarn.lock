@@ -71,7 +71,7 @@
     "@smithy/util-utf8" "^2.0.0"
     tslib "^2.6.2"
 
-"@aws-sdk/client-route-53@^3.662.0":
+"@aws-sdk/client-route-53@^3.687.0":
   version "3.687.0"
   resolved "https://registry.yarnpkg.com/@aws-sdk/client-route-53/-/client-route-53-3.687.0.tgz#307d407e0e7807a78b223a63bf4056f48d29c340"
   integrity sha512-OhBpDKzKezk8OQOxhMmQI3X5XeBkzdX4+g+JFyU+dsp5y1QlW2ET49FiGiud/JJJlUwxyRQj3Nxvj+5P/BMBjw==
@@ -210,7 +210,7 @@
     "@smithy/util-utf8" "^3.0.0"
     tslib "^2.6.2"
 
-"@aws-sdk/client-sts@3.687.0", "@aws-sdk/client-sts@^3.662.0":
+"@aws-sdk/client-sts@3.687.0", "@aws-sdk/client-sts@^3.687.0":
   version "3.687.0"
   resolved "https://registry.yarnpkg.com/@aws-sdk/client-sts/-/client-sts-3.687.0.tgz#fcb837080b225c5820f08326e98db54e48606fb1"
   integrity sha512-SQjDH8O4XCTtouuCVYggB0cCCrIaTzUZIkgJUpOsIEJBLlTbNOb/BZqUShAQw2o9vxr2rCeOGjAQOYPysW/Pmg==
@@ -928,18 +928,18 @@
   resolved "https://registry.yarnpkg.com/@eslint/js/-/js-8.57.1.tgz#de633db3ec2ef6a3c89e2f19038063e8a122e2c2"
   integrity sha512-d9zaMRSTIKDLhctzH12MtXvJKSSUhaHcjV+2Z+GK+EEY7XKpP5yR4x+N3TAcHTcu963nIr+TMcCb4DBCYX1z6Q==
 
-"@gemeentenijmegen/aws-constructs@^0.0.22":
-  version "0.0.22"
-  resolved "https://registry.yarnpkg.com/@gemeentenijmegen/aws-constructs/-/aws-constructs-0.0.22.tgz#5a73f759db5bdce3a5cef85a2d6c527832deecd3"
-  integrity sha512-UjiIWq46aY0IdnX8JGi+KAtzawLAh1LD070WHHA4bVg1En8jOQlKMClXNnqNEIN0vpA5WjOCPmZqf5xfxp23qw==
+"@gemeentenijmegen/aws-constructs@^0.0.23":
+  version "0.0.23"
+  resolved "https://registry.yarnpkg.com/@gemeentenijmegen/aws-constructs/-/aws-constructs-0.0.23.tgz#c2bc3b01f7b15192eb9eb9eb7b46a03217e616a5"
+  integrity sha512-svNtMJ1xG+eZs9jWsed1apY8rbRSrsyXWfwLYLw1YG5F/WUuOMNBm9/L32YwUbognZyqpazgIFYTENrRI8geyQ==
 
-"@gemeentenijmegen/dnssec-record@^0.0.21":
-  version "0.0.21"
-  resolved "https://registry.yarnpkg.com/@gemeentenijmegen/dnssec-record/-/dnssec-record-0.0.21.tgz#6b0b2237ee1aadd817e8e136922d10d16031c7d5"
-  integrity sha512-uOrFExI7/vLK5acg9pebNVtKByYPYB7UR8hQof3680KYTZjtrmF+ARmDZurtkx8f4b33xIv/yld0rK8bwEkWUg==
+"@gemeentenijmegen/dnssec-record@^0.0.22":
+  version "0.0.22"
+  resolved "https://registry.yarnpkg.com/@gemeentenijmegen/dnssec-record/-/dnssec-record-0.0.22.tgz#6ac32cd0e2903c043e082a13a46a845c170671a0"
+  integrity sha512-9Inhrv7N2t3OZTQoKHWMSHXdoGmFRepCj8wNznSsNWnFt86fTYEoHWYmn5vzsVgb5ZYxmGNHZjw6QWAmIU9vsQ==
   dependencies:
-    "@aws-sdk/client-route-53" "^3.662.0"
-    "@aws-sdk/client-sts" "^3.662.0"
+    "@aws-sdk/client-route-53" "^3.687.0"
+    "@aws-sdk/client-sts" "^3.687.0"
     "@types/aws-lambda" "^8.10.145"
 
 "@gemeentenijmegen/projen-project-type@^1.8.1":
