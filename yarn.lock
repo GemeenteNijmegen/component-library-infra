@@ -975,10 +975,10 @@
     "@aws-sdk/client-sts" "^3.699.0"
     "@types/aws-lambda" "^8.10.146"
 
-"@gemeentenijmegen/projen-project-type@^1.8.4":
-  version "1.8.4"
-  resolved "https://registry.yarnpkg.com/@gemeentenijmegen/projen-project-type/-/projen-project-type-1.8.4.tgz#5785c9e1113b13229fe197e46cde558ac05d5a26"
-  integrity sha512-jXjbk4FjhXGQHbg7v81RI4vLSig4Bu1YPPQ1izQbkko5NkZwgrax77cz5CQkvJ8HcezmdjI8++Se6vl5Bflp3w==
+"@gemeentenijmegen/projen-project-type@^1.8.5":
+  version "1.8.5"
+  resolved "https://registry.yarnpkg.com/@gemeentenijmegen/projen-project-type/-/projen-project-type-1.8.5.tgz#5e7a9829745a0a74728c9574bf1cd14b4c105519"
+  integrity sha512-5kny1AoJ6psNachzu/63GDWN1zew3662a0eHN80OnRPN0T+ocoXzeuSXnRa+iyKZAeM3Hi5YVTKAwPA66vf/Ow==
 
 "@humanfs/core@^0.19.1":
   version "0.19.1"
@@ -6290,9 +6290,9 @@ yaml@1.10.2:
   integrity sha512-r3vXyErRCYJ7wg28yvBY5VSoAF8ZvlcW9/BwUzEtUsjvX/DKs24dIkuwjtuprwJJHsbyUbLApepYTR1BN4uHrg==
 
 yaml@^2.2.2, yaml@^2.4.1:
-  version "2.6.1"
-  resolved "https://registry.yarnpkg.com/yaml/-/yaml-2.6.1.tgz#42f2b1ba89203f374609572d5349fb8686500773"
-  integrity sha512-7r0XPzioN/Q9kXBro/XPnA6kznR73DHq+GXh5ON7ZozRO6aMjbmiBuKste2wslTFkC5d1dw0GooOCepZXJ2SAg==
+  version "2.7.0"
+  resolved "https://registry.yarnpkg.com/yaml/-/yaml-2.7.0.tgz#aef9bb617a64c937a9a748803786ad8d3ffe1e98"
+  integrity sha512-+hSoy/QHluxmC9kCIJyL/uyFmLmc+e5CFR5Wa+bpIhIj85LVb9ZH2nVnqrHoSvKogwODv0ClqZkmiSSaIH5LTA==
 
 yargs-parser@^20.2.2, yargs-parser@^20.2.3:
   version "20.2.9"
