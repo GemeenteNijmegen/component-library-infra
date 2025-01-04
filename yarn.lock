@@ -71,7 +71,7 @@
     "@smithy/util-utf8" "^2.0.0"
     tslib "^2.6.2"
 
-"@aws-sdk/client-route-53@^3.699.0":
+"@aws-sdk/client-route-53@^3.721.0":
   version "3.721.0"
   resolved "https://registry.yarnpkg.com/@aws-sdk/client-route-53/-/client-route-53-3.721.0.tgz#fb0fb97fe52847136c8b7312d08efcd97087b7f2"
   integrity sha512-pMeS5xMSjQ8sCqnkDxTGjiQyC44zRI+qovQ8wEJSfGxqNXKB/XL5szOpOELEN5K27XkE6+Z7SzyXJJI/fc0V9g==
@@ -210,7 +210,7 @@
     "@smithy/util-utf8" "^3.0.0"
     tslib "^2.6.2"
 
-"@aws-sdk/client-sts@3.721.0", "@aws-sdk/client-sts@^3.699.0":
+"@aws-sdk/client-sts@3.721.0", "@aws-sdk/client-sts@^3.721.0":
   version "3.721.0"
   resolved "https://registry.yarnpkg.com/@aws-sdk/client-sts/-/client-sts-3.721.0.tgz#701de8e0877aec3974291e19cd1361feda742680"
   integrity sha512-1Pv8F02hQFmPZs7WtGfQNlnInbG1lLzyngJc/MlZ3Ld2fIoWjaWp7bJWgYAjnzHNEuDtCabWJvIfePdRqsbYoA==
@@ -966,14 +966,14 @@
   resolved "https://registry.yarnpkg.com/@gemeentenijmegen/aws-constructs/-/aws-constructs-0.0.26.tgz#c392ea44fc2bf97dbbd5bc46ba41442cfac758d5"
   integrity sha512-+C4T3CTETZTiXZSSXvestd/K9++r5GxXw4Nxr0vWFFwtCCyBn/Bn26CxX1zOr+jPWsVAnx88JArQ2Q6+/DI7ug==
 
-"@gemeentenijmegen/dnssec-record@^0.0.24":
-  version "0.0.24"
-  resolved "https://registry.yarnpkg.com/@gemeentenijmegen/dnssec-record/-/dnssec-record-0.0.24.tgz#adbf03cacfd861b1ed01a8a21e3148831dde0380"
-  integrity sha512-dM69Xz4rMcC4ylpFnp36/PQ9R8KqnjxZAUCq/U6ycH2pxiA53bQW5E8WvGCkyW7YIX0Y0NzrWaSVJsihP84oYA==
+"@gemeentenijmegen/dnssec-record@^0.0.25":
+  version "0.0.25"
+  resolved "https://registry.yarnpkg.com/@gemeentenijmegen/dnssec-record/-/dnssec-record-0.0.25.tgz#cd8441f705dfe97fd8101faf2b97f01f9bef6a50"
+  integrity sha512-y9zdvHYHAZxf2DvcY+7yrJAwjS3K7REEbx7B1ZjoEngOf9b8C0PnQIiPMujR3F7V7fpLECG/0oBXIjzNsVnO1Q==
   dependencies:
-    "@aws-sdk/client-route-53" "^3.699.0"
-    "@aws-sdk/client-sts" "^3.699.0"
-    "@types/aws-lambda" "^8.10.146"
+    "@aws-sdk/client-route-53" "^3.721.0"
+    "@aws-sdk/client-sts" "^3.721.0"
+    "@types/aws-lambda" "^8.10.147"
 
 "@gemeentenijmegen/projen-project-type@^1.8.5":
   version "1.8.5"
@@ -1778,7 +1778,7 @@
   resolved "https://registry.yarnpkg.com/@tsconfig/node16/-/node16-1.0.4.tgz#0b92dcc0cc1c81f6f306a381f28e31b1a56536e9"
   integrity sha512-vxhUy4J8lyeyinH7Azl1pdd43GJhZH/tP2weN8TntQblOY+A0XbT8DJk1/oCPuOOyg/Ja757rG0CgHcWC8OfMA==
 
-"@types/aws-lambda@^8.10.146":
+"@types/aws-lambda@^8.10.147":
   version "8.10.147"
   resolved "https://registry.yarnpkg.com/@types/aws-lambda/-/aws-lambda-8.10.147.tgz#dc5c89aa32f47a9b35e52c32630545c83afa6f2f"
   integrity sha512-nD0Z9fNIZcxYX5Mai2CTmFD7wX7UldCkW2ezCF8D1T5hdiLsnTWDGRpfRYntU6VjTdLQjOvyszru7I1c1oCQew==
@@ -1871,9 +1871,9 @@
   integrity sha512-hov8bUuiLiyFPGyFPE1lwWhmzYbirOXQNNo40+y3zow8aFVTeyn3VWL0VFFfdNddA8S4Vf0Tc062rzyNr7Paag==
 
 "@types/node@*":
-  version "22.10.4"
-  resolved "https://registry.yarnpkg.com/@types/node/-/node-22.10.4.tgz#da36bebcc4b124f3d62bfde1cd1dafd7763949c1"
-  integrity sha512-99l6wv4HEzBQhvaU/UGoeBoCK61SCROQaCCGyQSgX2tEQ3rKkNZ2S7CEWnS/4s1LV+8ODdK21UeyR1fHP2mXug==
+  version "22.10.5"
+  resolved "https://registry.yarnpkg.com/@types/node/-/node-22.10.5.tgz#95af89a3fb74a2bb41ef9927f206e6472026e48b"
+  integrity sha512-F8Q+SeGimwOo86fiovQh8qiXfFEh2/ocYv7tU5pJ3EXMSSxk1Joj5wefpFK2fHTf/N6HKGSxIDBT9f3gCxXPkQ==
   dependencies:
     undici-types "~6.20.0"
 
@@ -5352,13 +5352,15 @@ reflect.getprototypeof@^1.0.6, reflect.getprototypeof@^1.0.9:
     which-builtin-type "^1.2.1"
 
 regexp.prototype.flags@^1.5.3:
-  version "1.5.3"
-  resolved "https://registry.yarnpkg.com/regexp.prototype.flags/-/regexp.prototype.flags-1.5.3.tgz#b3ae40b1d2499b8350ab2c3fe6ef3845d3a96f42"
-  integrity sha512-vqlC04+RQoFalODCbCumG2xIOvapzVMHwsyIGM/SIE8fRhFFsXeH8/QQ+s0T0kDAhKc4k30s73/0ydkHQz6HlQ==
+  version "1.5.4"
+  resolved "https://registry.yarnpkg.com/regexp.prototype.flags/-/regexp.prototype.flags-1.5.4.tgz#1ad6c62d44a259007e55b3970e00f746efbcaa19"
+  integrity sha512-dYqgNSZbDwkaJ2ceRd9ojCGjBq+mOm9LmtXnAnEGyHhN/5R7iDW2TRw3h+o/jCFxus3P2LfWIIiwowAjANm7IA==
   dependencies:
-    call-bind "^1.0.7"
+    call-bind "^1.0.8"
     define-properties "^1.2.1"
     es-errors "^1.3.0"
+    get-proto "^1.0.1"
+    gopd "^1.2.0"
     set-function-name "^2.0.2"
 
 repeat-string@^1.6.1:
