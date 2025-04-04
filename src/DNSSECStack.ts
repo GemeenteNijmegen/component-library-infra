@@ -1,5 +1,5 @@
 import { DnssecRecordStruct } from '@gemeentenijmegen/dnssec-record';
-import { aws_route53 as Route53, Stack, StackProps, aws_ssm as SSM } from 'aws-cdk-lib';
+import { Duration, aws_route53 as Route53, aws_ssm as SSM, Stack, StackProps } from 'aws-cdk-lib';
 import { RemoteParameters } from 'cdk-remote-stack';
 import { Construct } from 'constructs';
 import { Configurable } from './Configuration';
@@ -26,6 +26,7 @@ export class DNSSECStack extends Stack {
     const rootZoneParams = new RemoteParameters(this, 'root-zone-params', {
       path: Statics.accountRootHostedZonePath,
       region: props.configuration.deployToEnvironment.region,
+      timeout: Duration.seconds(10),
     });
     const accountRootZone = Route53.HostedZone.fromHostedZoneAttributes(this, 'account-root-zone', {
       hostedZoneId: rootZoneParams.get(Statics.accountRootHostedZoneId),
