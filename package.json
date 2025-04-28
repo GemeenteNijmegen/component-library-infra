@@ -4,6 +4,8 @@
     "build": "npx projen build",
     "bump": "npx projen bump",
     "bundle": "npx projen bundle",
+    "bundle:CacheInvalidation/CacheInvalidation.lambda": "npx projen bundle:CacheInvalidation/CacheInvalidation.lambda",
+    "bundle:CacheInvalidation/CacheInvalidation.lambda:watch": "npx projen bundle:CacheInvalidation/CacheInvalidation.lambda:watch",
     "clobber": "npx projen clobber",
     "compile": "npx projen compile",
     "default": "npx projen default",
@@ -48,8 +50,11 @@
     "typescript": "^5.8.2"
   },
   "dependencies": {
+    "@aws-sdk/client-cloudfront": "^3.797.0",
     "@gemeentenijmegen/aws-constructs": "^0.0.32",
     "@gemeentenijmegen/dnssec-record": "^0.0.30",
+    "@gemeentenijmegen/utils": "^0.0.30",
+    "@types/aws-lambda": "^8.10.149",
     "aws-cdk-lib": "^2.1.0",
     "cdk-remote-stack": "^2.1.0",
     "constructs": "^10.0.5"
