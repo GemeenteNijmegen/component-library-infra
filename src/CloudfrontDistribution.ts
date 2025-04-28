@@ -1,5 +1,5 @@
 import path from 'path';
-import { Duration, Environment, aws_ssm } from 'aws-cdk-lib';
+import { aws_ssm, Duration, Environment } from 'aws-cdk-lib';
 import { Certificate } from 'aws-cdk-lib/aws-certificatemanager';
 import { AllowedMethods, CachePolicy, Distribution, Function, FunctionCode, FunctionEventType, HeadersFrameOption, HeadersReferrerPolicy, PriceClass, ResponseHeadersPolicy, S3OriginConfig, SecurityPolicyProtocol, ViewerProtocolPolicy } from 'aws-cdk-lib/aws-cloudfront';
 import { S3Origin } from 'aws-cdk-lib/aws-cloudfront-origins';
@@ -18,6 +18,7 @@ interface CloudfrontDistributionProps extends Configurable {
 }
 
 export class CloudfrontDistribution extends Construct {
+  public distribution: Distribution;
   constructor(scope: Construct, id: string, props: CloudfrontDistributionProps) {
     super(scope, id);
 
@@ -27,7 +28,7 @@ export class CloudfrontDistribution extends Construct {
     const zoneName = aws_ssm.StringParameter.valueForStringParameter(this, Statics.ssmZoneName);
     const domainNames = props.configuration.alternativeDomains ? [zoneName, ...props.configuration.alternativeDomains] : [zoneName];
 
-    const distribution = new Distribution(this, 'cf-distribution', {
+    this.distribution = new Distribution(this, 'cf-distribution', {
       priceClass: PriceClass.PRICE_CLASS_100,
       certificate,
       domainNames,
@@ -44,7 +45,7 @@ export class CloudfrontDistribution extends Construct {
       defaultRootObject: 'index.html',
     });
 
-    this.addDnsRecords(distribution, zoneId, zoneName);
+    this.addDnsRecords(this.distribution, zoneId, zoneName);
 
   }
 
