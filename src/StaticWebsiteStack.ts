@@ -26,6 +26,7 @@ export class StaticWebsiteStack extends Stack {
       triggerKeys: [
         'index.html',
       ],
+      environment: props.configuration.branchName == 'main' ? 'production' : 'acceptance',
     });
   }
 }
