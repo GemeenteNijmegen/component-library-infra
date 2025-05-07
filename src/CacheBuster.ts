@@ -9,19 +9,21 @@ interface CacheBusterProps {
   bucket: IBucket;
   triggerKeys: string[];
   distribution: Distribution;
+  environment: 'production' | 'acceptance';
 }
 export class CacheBuster extends Construct {
   constructor(scope: Construct, id: string, props: CacheBusterProps) {
     super(scope, id);
-    const lambda = this.createLambda(props.distribution);
+    const lambda = this.createLambda(props.distribution, props.environment);
     this.setupTrigger(props.bucket, props.triggerKeys, lambda);
   }
 
-  createLambda(distribution: Distribution) {
+  createLambda(distribution: Distribution, environment: 'production' | 'acceptance') {
     const lambda = new CacheInvalidationFunction(this, 'cacheInvalidator', {
       description: 'Invalidates a Cloudfront Cache. This is triggered by put events on a specific S3 key',
       environment: {
         CLOUDFRONT_DISTRIBUTION_ID: distribution.distributionId,
+        ENVIRONMENT: environment,
       },
     });
     distribution.grantCreateInvalidation(lambda.grantPrincipal);
