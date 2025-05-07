@@ -8,7 +8,7 @@ export function invalidateCommand(distributionId: string) {
     InvalidationBatch: {
       CallerReference: process.env.AWS_LAMBDA_FUNCTION_NAME,
       Paths: {
-        Quantity: 2,
+        Quantity: items.length,
         Items: items,
       },
     },
