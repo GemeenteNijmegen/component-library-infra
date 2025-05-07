@@ -18,7 +18,7 @@ export function invalidateCommand(distributionId: string) {
 
 function invalidationItems(environment?: string) {
   let items = [
-    '/*'
+    '/*',
   ];
   if (environment == 'production') {
     items = [
