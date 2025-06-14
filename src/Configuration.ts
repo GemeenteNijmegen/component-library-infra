@@ -43,7 +43,7 @@ export interface Configuration {
    * A list of CNAME records to register in the hosted zone
    * Note: key should be withou domain suffix (only subdomain).
    */
-  readonly cnameRecords?: {[key: string]: string};
+  readonly cnameRecords?: { [key: string]: string };
 
 }
 
@@ -72,7 +72,7 @@ const deploymentEnvironment = {
   region: 'eu-central-1',
 };
 
-const configurations: { [name: string] : Configuration } = {
+const configurations: { [name: string]: Configuration } = {
   development: {
     branchName: 'development',
     deployFromEnvironment: deploymentEnvironment,
