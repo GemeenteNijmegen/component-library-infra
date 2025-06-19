@@ -32,9 +32,9 @@
   integrity sha512-7bY3J8GCVxLupn/kNmpPc5VJz8grx+4RKfnnJiO1LG+uxkZfANZG3RMHhE+qQxxwkyQ9/MfPtTpf748UhR425A==
 
 "@aws-cdk/cloud-assembly-schema@^44.2.0":
-  version "44.5.0"
-  resolved "https://registry.yarnpkg.com/@aws-cdk/cloud-assembly-schema/-/cloud-assembly-schema-44.5.0.tgz#475b4997977c1e3f8ebc379823259f4c85986ce8"
-  integrity sha512-/dk9YtqF+BnBS6k4m7YWIp7Pd80m7jdjT8ED8gb3Rd9hAuAEUoJubO0M3EOlLFmknIesQNm95LYU6vt/MIQhWg==
+  version "44.6.0"
+  resolved "https://registry.yarnpkg.com/@aws-cdk/cloud-assembly-schema/-/cloud-assembly-schema-44.6.0.tgz#06bf0633ee92d8b3e77cbd96bbbf0ace757e006b"
+  integrity sha512-oH1I2/hf+5PJtilXZqbf5G0q4C1WXfu65mqFmBujwwdL/rtfJcgY5H5OS3EDwNXTZ726+UuXbNHKpaNLEs7VUA==
   dependencies:
     jsonschema "~1.4.1"
     semver "^7.7.2"
@@ -77,7 +77,7 @@
     "@smithy/util-utf8" "^2.0.0"
     tslib "^2.6.2"
 
-"@aws-sdk/client-route-53@^3.812.0":
+"@aws-sdk/client-route-53@^3.830.0":
   version "3.830.0"
   resolved "https://registry.yarnpkg.com/@aws-sdk/client-route-53/-/client-route-53-3.830.0.tgz#c6e650871103b4dd65ef8877793917ce6b0196e3"
   integrity sha512-dbdJPZ4Su9XVaPz8VvO9xK+O0pqEy6LJZ+QZrWSivakGEcCTIJTSzu0cy14QABfhVzzDnWDdA2qIFof2eMaemQ==
@@ -169,7 +169,7 @@
     "@smithy/util-utf8" "^4.0.0"
     tslib "^2.6.2"
 
-"@aws-sdk/client-sts@^3.812.0":
+"@aws-sdk/client-sts@^3.830.0":
   version "3.830.0"
   resolved "https://registry.yarnpkg.com/@aws-sdk/client-sts/-/client-sts-3.830.0.tgz#abaa8a73c0c16cb19bbc5ec68cad3783ed666f04"
   integrity sha512-tzVgR1tKK+QTHWzEHvMsGUbAf6n3kNfieTdvMSGhXhkK8TfOQ/k6vwMieISlX2ftMafI1RsPaUEv+9ae+VoGRw==
@@ -1034,24 +1034,24 @@
     "@eslint/core" "^0.15.0"
     levn "^0.4.1"
 
-"@gemeentenijmegen/aws-constructs@^0.0.36":
-  version "0.0.36"
-  resolved "https://registry.yarnpkg.com/@gemeentenijmegen/aws-constructs/-/aws-constructs-0.0.36.tgz#fcf4cf54004ef6da3da8a08c59c662eca75f5caa"
-  integrity sha512-GgnQlBP5v8yYHlqrwqRBC/b6CV/NcZ35OsALt0M3C3tAh9a+NVXyVaQwl4dSn4cgek8qzNDgl/Ux9Oqtune1sQ==
+"@gemeentenijmegen/aws-constructs@^0.0.37":
+  version "0.0.37"
+  resolved "https://registry.yarnpkg.com/@gemeentenijmegen/aws-constructs/-/aws-constructs-0.0.37.tgz#64768d75e5d34febae8764abd08dfc83647c3bce"
+  integrity sha512-HhB5AYADkbQSaYPfusjEO5PZduH5uEl+dxG5p7Junbr1tKvlWgQXrlZVpxImWHGuEiFmIRwugJ9XIWfAIUKQQg==
 
-"@gemeentenijmegen/dnssec-record@^0.0.32":
-  version "0.0.32"
-  resolved "https://registry.yarnpkg.com/@gemeentenijmegen/dnssec-record/-/dnssec-record-0.0.32.tgz#8db3e8cd318e669f4d9b5e6f02b9c5b282bdc640"
-  integrity sha512-bM4ei+X64nf93LdioLuTIEsju9CRSwRek2V5fdEVvZk0O3HskSpomlKYaiRwD9UHJL/pK9Az5EmPtfrKMiQ7OQ==
+"@gemeentenijmegen/dnssec-record@^0.0.33":
+  version "0.0.33"
+  resolved "https://registry.yarnpkg.com/@gemeentenijmegen/dnssec-record/-/dnssec-record-0.0.33.tgz#775fee1c237411c80dd03e6acab86c4d2fefd607"
+  integrity sha512-APw/hPdlMQOLkBXx5ISTcMYgYIFrV7waB6xVHVtyxplHiWn/cANN1a4Xase170zonzykBNjOogk7Q4ytdVUYsg==
   dependencies:
-    "@aws-sdk/client-route-53" "^3.812.0"
-    "@aws-sdk/client-sts" "^3.812.0"
-    "@types/aws-lambda" "^8.10.149"
+    "@aws-sdk/client-route-53" "^3.830.0"
+    "@aws-sdk/client-sts" "^3.830.0"
+    "@types/aws-lambda" "^8.10.150"
 
-"@gemeentenijmegen/projen-project-type@^1.10.5":
-  version "1.10.5"
-  resolved "https://registry.yarnpkg.com/@gemeentenijmegen/projen-project-type/-/projen-project-type-1.10.5.tgz#811b685a683f3877eb08fc665ad44f4c5c9f1724"
-  integrity sha512-yzcT8xv6Ju/J8AAW9tt7Re+RHfJ5iwxrrsyqJCt5J3DxdsZijpKr4AP2bokdue9lpLLZy/xkS+69qZ/6xs7y1w==
+"@gemeentenijmegen/projen-project-type@^1.10.6":
+  version "1.10.6"
+  resolved "https://registry.yarnpkg.com/@gemeentenijmegen/projen-project-type/-/projen-project-type-1.10.6.tgz#18ae451317a9abb89a4bed65b1e9c474eb9a3430"
+  integrity sha512-J+qx07M9FTjNH0eEFmAZl0mHV9IuhNOD5Dh4RIPHnQpHFZmHNrkL2OJKMLaU2PpRsF3d0jSh1cv8TMXHFfBQ7A==
 
 "@humanfs/core@^0.19.1":
   version "0.19.1"
@@ -1869,7 +1869,7 @@
   dependencies:
     tslib "^2.4.0"
 
-"@types/aws-lambda@^8.10.149":
+"@types/aws-lambda@^8.10.150":
   version "8.10.150"
   resolved "https://registry.yarnpkg.com/@types/aws-lambda/-/aws-lambda-8.10.150.tgz#4998b238750ec389a326a7cdb625808834036bd3"
   integrity sha512-AX+AbjH/rH5ezX1fbK8onC/a+HyQHo7QGmvoxAE42n22OsciAxvZoZNEr22tbXs8WfP1nIsBjKDpgPm3HjOZbA==
@@ -3149,9 +3149,9 @@ ejs@^3.1.10:
     jake "^10.8.5"
 
 electron-to-chromium@^1.5.160:
-  version "1.5.169"
-  resolved "https://registry.yarnpkg.com/electron-to-chromium/-/electron-to-chromium-1.5.169.tgz#6afdfd8e701b7ab744e2bb0cfdec3cefc1072cbe"
-  integrity sha512-q7SQx6mkLy0GTJK9K9OiWeaBMV4XQtBSdf6MJUzDB/H/5tFXfIiX38Lci1Kl6SsgiEhz1SQI1ejEOU5asWEhwQ==
+  version "1.5.170"
+  resolved "https://registry.yarnpkg.com/electron-to-chromium/-/electron-to-chromium-1.5.170.tgz#9f6697de4339e24da8b234e4492a9ecb91f5989c"
+  integrity sha512-GP+M7aeluQo9uAyiTCxgIj/j+PrWhMlY7LFVj8prlsPljd0Fdg9AprlfUi+OCSFWy9Y5/2D/Jrj9HS8Z4rpKWA==
 
 emittery@^0.13.1:
   version "0.13.1"
