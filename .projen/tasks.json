@@ -44,7 +44,30 @@
     },
     "bundle": {
       "name": "bundle",
-      "description": "Prepare assets"
+      "description": "Prepare assets",
+      "steps": [
+        {
+          "spawn": "bundle:CacheInvalidation/CacheInvalidation.lambda"
+        }
+      ]
+    },
+    "bundle:CacheInvalidation/CacheInvalidation.lambda": {
+      "name": "bundle:CacheInvalidation/CacheInvalidation.lambda",
+      "description": "Create a JavaScript bundle from src/CacheInvalidation/CacheInvalidation.lambda.ts",
+      "steps": [
+        {
+          "exec": "esbuild --bundle src/CacheInvalidation/CacheInvalidation.lambda.ts --target=\"node22\" --platform=\"node\" --outfile=\"assets/CacheInvalidation/CacheInvalidation.lambda/index.js\" --tsconfig=\"tsconfig.dev.json\" --external:@aws-sdk/*"
+        }
+      ]
+    },
+    "bundle:CacheInvalidation/CacheInvalidation.lambda:watch": {
+      "name": "bundle:CacheInvalidation/CacheInvalidation.lambda:watch",
+      "description": "Continuously update the JavaScript bundle from src/CacheInvalidation/CacheInvalidation.lambda.ts",
+      "steps": [
+        {
+          "exec": "esbuild --bundle src/CacheInvalidation/CacheInvalidation.lambda.ts --target=\"node22\" --platform=\"node\" --outfile=\"assets/CacheInvalidation/CacheInvalidation.lambda/index.js\" --tsconfig=\"tsconfig.dev.json\" --external:@aws-sdk/* --watch"
+        }
+      ]
     },
     "clobber": {
       "name": "clobber",
@@ -290,13 +313,13 @@
       },
       "steps": [
         {
-          "exec": "npx npm-check-updates@16 --upgrade --target=minor --peer --no-deprecated --dep=dev,peer,prod,optional --filter=@gemeentenijmegen/projen-project-type,@types/jest,@types/node,esbuild,eslint-import-resolver-typescript,eslint-plugin-import,jest,projen,ts-jest,ts-node,typescript,@gemeentenijmegen/aws-constructs,@gemeentenijmegen/dnssec-record,cdk-remote-stack"
+          "exec": "npx npm-check-updates@16 --upgrade --target=minor --peer --no-deprecated --dep=dev,peer,prod,optional --filter=@gemeentenijmegen/projen-project-type,@types/jest,@types/node,esbuild,eslint-import-resolver-typescript,eslint-plugin-import,jest,projen,ts-jest,ts-node,typescript,@aws-sdk/client-cloudfront,@gemeentenijmegen/aws-constructs,@gemeentenijmegen/dnssec-record,@gemeentenijmegen/utils,@types/aws-lambda,cdk-remote-stack"
         },
         {
           "exec": "yarn install --check-files"
         },
         {
-          "exec": "yarn upgrade @gemeentenijmegen/projen-project-type @stylistic/eslint-plugin @types/jest @types/node @typescript-eslint/eslint-plugin @typescript-eslint/parser aws-cdk commit-and-tag-version esbuild eslint-import-resolver-typescript eslint-plugin-import eslint jest jest-junit projen ts-jest ts-node typescript @gemeentenijmegen/aws-constructs @gemeentenijmegen/dnssec-record aws-cdk-lib cdk-remote-stack constructs"
+          "exec": "yarn upgrade @gemeentenijmegen/projen-project-type @stylistic/eslint-plugin @types/jest @types/node @typescript-eslint/eslint-plugin @typescript-eslint/parser aws-cdk commit-and-tag-version esbuild eslint-import-resolver-typescript eslint-plugin-import eslint jest jest-junit projen ts-jest ts-node typescript @aws-sdk/client-cloudfront @gemeentenijmegen/aws-constructs @gemeentenijmegen/dnssec-record @gemeentenijmegen/utils @types/aws-lambda aws-cdk-lib cdk-remote-stack constructs"
         },
         {
           "exec": "npx projen"

@@ -151,7 +151,8 @@
       {
         "devDependencies": [
           "**/test/**",
-          "**/build-tools/**"
+          "**/build-tools/**",
+          "src/CacheInvalidation/CacheInvalidation.lambda.ts"
         ],
         "optionalDependencies": false,
         "peerDependencies": true
