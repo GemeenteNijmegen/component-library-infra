@@ -1,5 +1,5 @@
 import {
-  aws_certificatemanager as CertificateManager, aws_ssm as SSM, Stack,
+  aws_certificatemanager as CertificateManager, Duration, aws_ssm as SSM, Stack,
   StackProps,
 } from 'aws-cdk-lib';
 import { HostedZone } from 'aws-cdk-lib/aws-route53';
@@ -49,6 +49,7 @@ export class UsEastCertificateStack extends Stack {
       path: Statics.ssmZonePath,
       region: fromRegion,
       alwaysUpdate: false,
+      timeout: Duration.seconds(10),
     });
     return HostedZone.fromHostedZoneAttributes(this, 'zone', {
       hostedZoneId: zoneParams.get(Statics.ssmZoneId),
