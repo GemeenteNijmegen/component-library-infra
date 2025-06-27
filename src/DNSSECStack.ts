@@ -76,6 +76,7 @@ export class DNSSECStack extends Stack {
     const zoneParams = new RemoteParameters(scope, 'zone-params', {
       path: Statics.ssmZonePath,
       region: fromRegion,
+      timeout: Duration.seconds(10),
     });
     return Route53.HostedZone.fromHostedZoneAttributes(scope, 'zone', {
       hostedZoneId: zoneParams.get(Statics.ssmZoneId),
