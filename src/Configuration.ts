@@ -43,7 +43,7 @@ export interface Configuration {
    * A list of CNAME records to register in the hosted zone
    * Note: key should be withou domain suffix (only subdomain).
    */
-  readonly cnameRecords?: {[key: string]: string};
+  readonly cnameRecords?: { [key: string]: string };
 
 }
 
@@ -72,7 +72,7 @@ const deploymentEnvironment = {
   region: 'eu-central-1',
 };
 
-const configurations: { [name: string] : Configuration } = {
+const configurations: { [name: string]: Configuration } = {
   development: {
     branchName: 'development',
     deployFromEnvironment: deploymentEnvironment,
@@ -91,7 +91,7 @@ const configurations: { [name: string] : Configuration } = {
       region: 'eu-central-1',
     },
     subdomain: 'componenten-accp',
-    alternativeDomains: ['componenten.acc.nijmegen.nl', 'componenten-accp.csp2-nijmegen.nl'],
+    alternativeDomains: ['componenten.acc.nijmegen.nl'],
     includePipelineValidationChecks: false,
   },
   production: {
@@ -102,7 +102,7 @@ const configurations: { [name: string] : Configuration } = {
       region: 'eu-central-1',
     },
     subdomain: 'componenten',
-    alternativeDomains: ['componenten.nijmegen.nl', 'componenten-prod.csp2-nijmegen.nl'],
+    alternativeDomains: ['componenten.nijmegen.nl'],
     includePipelineValidationChecks: false,
   },
 };

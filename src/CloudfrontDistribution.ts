@@ -58,6 +58,7 @@ export class CloudfrontDistribution extends Construct {
       path: `${Statics.certificatePath}/`,
       region: 'us-east-1',
       alwaysUpdate: true,
+      timeout: Duration.seconds(10),
     });
     const certificateArn = parameters.get(Statics.certificateArn);
     return certificateArn;
