@@ -50,11 +50,11 @@
     "typescript": "^5.8.3"
   },
   "dependencies": {
-    "@aws-sdk/client-cloudfront": "^3.797.0",
+    "@aws-sdk/client-cloudfront": "^3.839.0",
     "@gemeentenijmegen/aws-constructs": "^0.0.37",
     "@gemeentenijmegen/dnssec-record": "^0.0.33",
-    "@gemeentenijmegen/utils": "^0.0.30",
-    "@types/aws-lambda": "^8.10.149",
+    "@gemeentenijmegen/utils": "^0.0.33",
+    "@types/aws-lambda": "^8.10.150",
     "aws-cdk-lib": "^2.1.0",
     "cdk-remote-stack": "^2.1.0",
     "constructs": "^10.0.5"
