@@ -51,7 +51,7 @@
   },
   "dependencies": {
     "@aws-sdk/client-cloudfront": "^3.840.0",
-    "@gemeentenijmegen/aws-constructs": "^0.0.37",
+    "@gemeentenijmegen/aws-constructs": "^0.0.38",
     "@gemeentenijmegen/dnssec-record": "^0.0.33",
     "@gemeentenijmegen/utils": "^0.0.33",
     "@types/aws-lambda": "^8.10.150",
