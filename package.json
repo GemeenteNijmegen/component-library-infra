@@ -38,7 +38,7 @@
     "@typescript-eslint/parser": "^8",
     "aws-cdk": "^2",
     "commit-and-tag-version": "^12",
-    "esbuild": "^0.25.5",
+    "esbuild": "^0.25.6",
     "eslint": "^9",
     "eslint-import-resolver-typescript": "^3.10.1",
     "eslint-plugin-import": "^2.32.0",
@@ -51,7 +51,7 @@
   },
   "dependencies": {
     "@aws-sdk/client-cloudfront": "^3.840.0",
-    "@gemeentenijmegen/aws-constructs": "^0.0.38",
+    "@gemeentenijmegen/aws-constructs": "^0.0.39",
     "@gemeentenijmegen/dnssec-record": "^0.0.33",
     "@gemeentenijmegen/utils": "^0.0.33",
     "@types/aws-lambda": "^8.10.150",
