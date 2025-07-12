@@ -52,8 +52,8 @@
   "dependencies": {
     "@aws-sdk/client-cloudfront": "^3.844.0",
     "@gemeentenijmegen/aws-constructs": "^0.0.40",
-    "@gemeentenijmegen/dnssec-record": "^0.0.33",
-    "@gemeentenijmegen/utils": "^0.0.33",
+    "@gemeentenijmegen/dnssec-record": "^0.0.34",
+    "@gemeentenijmegen/utils": "^0.0.34",
     "@types/aws-lambda": "^8.10.150",
     "aws-cdk-lib": "^2.1.0",
     "cdk-remote-stack": "^2.1.0",
