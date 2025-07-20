@@ -38,7 +38,7 @@
     "@typescript-eslint/parser": "^8",
     "aws-cdk": "^2",
     "commit-and-tag-version": "^12",
-    "esbuild": "^0.25.7",
+    "esbuild": "^0.25.8",
     "eslint": "^9",
     "eslint-import-resolver-typescript": "^3.10.1",
     "eslint-plugin-import": "^2.32.0",
@@ -54,7 +54,7 @@
     "@gemeentenijmegen/aws-constructs": "^0.0.40",
     "@gemeentenijmegen/dnssec-record": "^0.0.34",
     "@gemeentenijmegen/utils": "^0.0.34",
-    "@types/aws-lambda": "^8.10.150",
+    "@types/aws-lambda": "^8.10.152",
     "aws-cdk-lib": "^2.1.0",
     "cdk-remote-stack": "^2.1.0",
     "constructs": "^10.0.5"
