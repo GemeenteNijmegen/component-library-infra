@@ -47,10 +47,10 @@
     "projen": "^0.94.2",
     "ts-jest": "^29.4.0",
     "ts-node": "^10.9.2",
-    "typescript": "^5.8.3"
+    "typescript": "^5.9.2"
   },
   "dependencies": {
-    "@aws-sdk/client-cloudfront": "^3.857.0",
+    "@aws-sdk/client-cloudfront": "^3.858.0",
     "@gemeentenijmegen/aws-constructs": "^0.0.41",
     "@gemeentenijmegen/dnssec-record": "^0.0.35",
     "@gemeentenijmegen/utils": "^0.0.35",
