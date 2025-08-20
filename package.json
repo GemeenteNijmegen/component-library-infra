@@ -30,7 +30,7 @@
     "projen": "npx projen"
   },
   "devDependencies": {
-    "@gemeentenijmegen/projen-project-type": "^1.11.2",
+    "@gemeentenijmegen/projen-project-type": "^1.11.3",
     "@stylistic/eslint-plugin": "^2",
     "@types/jest": "^29.5.14",
     "@types/node": "^18",
@@ -51,9 +51,9 @@
   },
   "dependencies": {
     "@aws-sdk/client-cloudfront": "^3.864.0",
-    "@gemeentenijmegen/aws-constructs": "^0.0.41",
-    "@gemeentenijmegen/dnssec-record": "^0.0.35",
-    "@gemeentenijmegen/utils": "^0.0.35",
+    "@gemeentenijmegen/aws-constructs": "^0.0.42",
+    "@gemeentenijmegen/dnssec-record": "^0.0.36",
+    "@gemeentenijmegen/utils": "^0.0.36",
     "@types/aws-lambda": "^8.10.152",
     "aws-cdk-lib": "^2.1.0",
     "cdk-remote-stack": "^2.1.0",
