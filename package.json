@@ -53,7 +53,7 @@
     "@aws-sdk/client-cloudfront": "^3.901.0",
     "@gemeentenijmegen/aws-constructs": "^0.0.43",
     "@gemeentenijmegen/dnssec-record": "^0.0.37",
-    "@gemeentenijmegen/utils": "^0.0.37",
+    "@gemeentenijmegen/utils": "^0.0.38",
     "@types/aws-lambda": "^8.10.153",
     "aws-cdk-lib": "^2.1.0",
     "cdk-remote-stack": "^2.1.0",
