@@ -54,7 +54,7 @@
     "@gemeentenijmegen/aws-constructs": "^0.0.43",
     "@gemeentenijmegen/dnssec-record": "^0.0.37",
     "@gemeentenijmegen/utils": "^0.0.38",
-    "@types/aws-lambda": "^8.10.153",
+    "@types/aws-lambda": "^8.10.155",
     "aws-cdk-lib": "^2.1.0",
     "cdk-remote-stack": "^2.1.0",
     "constructs": "^10.0.5"
