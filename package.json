@@ -50,7 +50,7 @@
     "typescript": "^5.9.3"
   },
   "dependencies": {
-    "@aws-sdk/client-cloudfront": "^3.906.0",
+    "@aws-sdk/client-cloudfront": "^3.907.0",
     "@gemeentenijmegen/aws-constructs": "^0.0.43",
     "@gemeentenijmegen/dnssec-record": "^0.0.37",
     "@gemeentenijmegen/utils": "^0.0.38",
