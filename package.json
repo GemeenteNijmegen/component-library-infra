@@ -45,12 +45,12 @@
     "jest": "^29.7.0",
     "jest-junit": "^16",
     "projen": "^0.96.5",
-    "ts-jest": "^29.4.4",
+    "ts-jest": "^29.4.5",
     "ts-node": "^10.9.2",
     "typescript": "^5.9.3"
   },
   "dependencies": {
-    "@aws-sdk/client-cloudfront": "^3.907.0",
+    "@aws-sdk/client-cloudfront": "^3.908.0",
     "@gemeentenijmegen/aws-constructs": "^0.0.43",
     "@gemeentenijmegen/dnssec-record": "^0.0.37",
     "@gemeentenijmegen/utils": "^0.0.38",
