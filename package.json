@@ -44,17 +44,17 @@
     "eslint-plugin-import": "^2.32.0",
     "jest": "^29.7.0",
     "jest-junit": "^16",
-    "projen": "^0.98.4",
+    "projen": "^0.98.5",
     "ts-jest": "^29.4.5",
     "ts-node": "^10.9.2",
     "typescript": "^5.9.3"
   },
   "dependencies": {
-    "@aws-sdk/client-cloudfront": "^3.918.0",
+    "@aws-sdk/client-cloudfront": "^3.919.0",
     "@gemeentenijmegen/aws-constructs": "^0.0.45",
     "@gemeentenijmegen/dnssec-record": "^0.0.39",
     "@gemeentenijmegen/utils": "^0.0.38",
-    "@types/aws-lambda": "^8.10.156",
+    "@types/aws-lambda": "^8.10.157",
     "aws-cdk-lib": "^2.1.0",
     "cdk-remote-stack": "^2.1.0",
     "constructs": "^10.0.5"
