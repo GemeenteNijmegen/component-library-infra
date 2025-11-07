@@ -314,7 +314,7 @@
       },
       "steps": [
         {
-          "exec": "npx npm-check-updates@16 --upgrade --target=minor --peer --no-deprecated --dep=dev,peer,prod,optional --filter=@gemeentenijmegen/projen-project-type,@types/jest,@types/node,esbuild,eslint-import-resolver-typescript,eslint-plugin-import,jest,projen,ts-jest,ts-node,typescript,@aws-sdk/client-cloudfront,@gemeentenijmegen/aws-constructs,@gemeentenijmegen/dnssec-record,@gemeentenijmegen/utils,@types/aws-lambda,cdk-remote-stack"
+          "exec": "npx npm-check-updates@18 --upgrade --target=minor --peer --no-deprecated --dep=dev,peer,prod,optional --filter=@gemeentenijmegen/projen-project-type,@types/jest,@types/node,esbuild,eslint-import-resolver-typescript,eslint-plugin-import,jest,projen,ts-jest,ts-node,typescript,@aws-sdk/client-cloudfront,@gemeentenijmegen/aws-constructs,@gemeentenijmegen/dnssec-record,@gemeentenijmegen/utils,@types/aws-lambda,cdk-remote-stack"
         },
         {
           "exec": "yarn install --check-files"
