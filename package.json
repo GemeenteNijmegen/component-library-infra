@@ -44,13 +44,13 @@
     "eslint-plugin-import": "^2.32.0",
     "jest": "^29.7.0",
     "jest-junit": "^16",
-    "projen": "^0.98.26",
+    "projen": "^0.98.28",
     "ts-jest": "^29.4.6",
     "ts-node": "^10.9.2",
     "typescript": "^5.9.3"
   },
   "dependencies": {
-    "@aws-sdk/client-cloudfront": "^3.940.0",
+    "@aws-sdk/client-cloudfront": "^3.943.0",
     "@gemeentenijmegen/aws-constructs": "^0.0.45",
     "@gemeentenijmegen/dnssec-record": "^0.0.40",
     "@gemeentenijmegen/utils": "^0.0.38",
