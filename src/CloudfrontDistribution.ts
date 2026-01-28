@@ -1,4 +1,5 @@
 import path from 'path';
+import { RemoteParameters } from '@gemeentenijmegen/cross-region-parameters';
 import { aws_ssm, Duration, Environment } from 'aws-cdk-lib';
 import { Certificate } from 'aws-cdk-lib/aws-certificatemanager';
 import { AllowedMethods, CachePolicy, Distribution, Function, FunctionCode, FunctionEventType, HeadersFrameOption, HeadersReferrerPolicy, PriceClass, ResponseHeadersPolicy, S3OriginConfig, SecurityPolicyProtocol, ViewerProtocolPolicy } from 'aws-cdk-lib/aws-cloudfront';
@@ -6,7 +7,6 @@ import { S3Origin } from 'aws-cdk-lib/aws-cloudfront-origins';
 import { AaaaRecord, ARecord, HostedZone, RecordTarget } from 'aws-cdk-lib/aws-route53';
 import { CloudFrontTarget } from 'aws-cdk-lib/aws-route53-targets';
 import { BlockPublicAccess, Bucket, BucketEncryption, IBucket, ObjectOwnership } from 'aws-cdk-lib/aws-s3';
-import { RemoteParameters } from 'cdk-remote-stack';
 import { Construct } from 'constructs';
 import { Configurable } from './Configuration';
 import { Statics } from './Statics';

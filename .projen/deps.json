@@ -89,6 +89,10 @@
       "type": "runtime"
     },
     {
+      "name": "@gemeentenijmegen/cross-region-parameters",
+      "type": "runtime"
+    },
+    {
       "name": "@gemeentenijmegen/dnssec-record",
       "type": "runtime"
     },
@@ -103,10 +107,6 @@
     {
       "name": "aws-cdk-lib",
       "version": "^2.1.0",
-      "type": "runtime"
-    },
-    {
-      "name": "cdk-remote-stack",
       "type": "runtime"
     },
     {

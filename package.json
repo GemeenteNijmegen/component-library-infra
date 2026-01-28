@@ -52,11 +52,11 @@
   "dependencies": {
     "@aws-sdk/client-cloudfront": "^3.975.0",
     "@gemeentenijmegen/aws-constructs": "^0.0.47",
+    "@gemeentenijmegen/cross-region-parameters": "^0.0.4",
     "@gemeentenijmegen/dnssec-record": "^0.0.41",
     "@gemeentenijmegen/utils": "^0.0.38",
     "@types/aws-lambda": "^8.10.160",
     "aws-cdk-lib": "^2.1.0",
-    "cdk-remote-stack": "^2.1.0",
     "constructs": "^10.0.5"
   },
   "license": "EUPL-1.2",
