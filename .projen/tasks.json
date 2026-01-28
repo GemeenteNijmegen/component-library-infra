@@ -314,13 +314,13 @@
       },
       "steps": [
         {
-          "exec": "npx npm-check-updates@18 --upgrade --target=minor --peer --no-deprecated --dep=dev,peer,prod,optional --filter=@gemeentenijmegen/projen-project-type,@types/jest,@types/node,esbuild,eslint-import-resolver-typescript,eslint-plugin-import,jest,ts-jest,ts-node,typescript,@aws-sdk/client-cloudfront,@gemeentenijmegen/aws-constructs,@gemeentenijmegen/cross-region-parameters,@gemeentenijmegen/dnssec-record,@gemeentenijmegen/utils,@types/aws-lambda"
+          "exec": "npx npm-check-updates@18 --upgrade --target=minor --peer --no-deprecated --dep=dev,peer,prod,optional --filter=@types/jest,@types/node,esbuild,eslint-import-resolver-typescript,eslint-plugin-import,jest,ts-jest,ts-node,typescript,@aws-sdk/client-cloudfront,@gemeentenijmegen/aws-constructs,@gemeentenijmegen/cross-region-parameters,@gemeentenijmegen/dnssec-record,@gemeentenijmegen/projen-project-type,@gemeentenijmegen/utils,@types/aws-lambda"
         },
         {
           "exec": "yarn install --check-files"
         },
         {
-          "exec": "yarn upgrade @gemeentenijmegen/projen-project-type @stylistic/eslint-plugin @types/jest @types/node @typescript-eslint/eslint-plugin @typescript-eslint/parser aws-cdk commit-and-tag-version esbuild eslint-import-resolver-typescript eslint-plugin-import eslint jest jest-junit projen ts-jest ts-node typescript @aws-sdk/client-cloudfront @gemeentenijmegen/aws-constructs @gemeentenijmegen/cross-region-parameters @gemeentenijmegen/dnssec-record @gemeentenijmegen/utils @types/aws-lambda aws-cdk-lib constructs"
+          "exec": "yarn upgrade @stylistic/eslint-plugin @types/jest @types/node @typescript-eslint/eslint-plugin @typescript-eslint/parser aws-cdk commit-and-tag-version esbuild eslint-import-resolver-typescript eslint-plugin-import eslint jest jest-junit projen ts-jest ts-node typescript @aws-sdk/client-cloudfront @gemeentenijmegen/aws-constructs @gemeentenijmegen/cross-region-parameters @gemeentenijmegen/dnssec-record @gemeentenijmegen/projen-project-type @gemeentenijmegen/utils @types/aws-lambda aws-cdk-lib constructs"
         },
         {
           "exec": "npx projen"

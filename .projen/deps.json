@@ -1,10 +1,6 @@
 {
   "dependencies": [
     {
-      "name": "@gemeentenijmegen/projen-project-type",
-      "type": "build"
-    },
-    {
       "name": "@stylistic/eslint-plugin",
       "version": "^2",
       "type": "build"
@@ -94,6 +90,10 @@
     },
     {
       "name": "@gemeentenijmegen/dnssec-record",
+      "type": "runtime"
+    },
+    {
+      "name": "@gemeentenijmegen/projen-project-type",
       "type": "runtime"
     },
     {
