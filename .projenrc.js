@@ -2,7 +2,7 @@ const { GemeenteNijmegenCdkApp } = require('@gemeentenijmegen/projen-project-typ
 const project = new GemeenteNijmegenCdkApp({
   cdkVersion: '2.1.0',
   defaultReleaseBranch: 'main',
-  devDeps: ['@gemeentenijmegen/projen-project-type'],
+  devDeps: [],
   name: 'component-library-infra',
   depsUpgradeOptions: {
     workflowOptions: {
@@ -11,7 +11,8 @@ const project = new GemeenteNijmegenCdkApp({
     },
   },
   deps: [
-    'cdk-remote-stack',
+    '@gemeentenijmegen/projen-project-type',
+    '@gemeentenijmegen/cross-region-parameters',
     '@gemeentenijmegen/aws-constructs',
     '@gemeentenijmegen/utils',
     '@gemeentenijmegen/dnssec-record',

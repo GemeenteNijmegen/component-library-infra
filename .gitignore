@@ -61,4 +61,5 @@ junit.xml
 !/src/CacheInvalidation/CacheInvalidation-function.ts
 !/.github/workflows/emergency.yml
 !/.github/workflows/auto-merge.yml
+!/.nvmrc
 !/.projenrc.js

@@ -1,9 +1,9 @@
+import { RemoteParameters } from '@gemeentenijmegen/cross-region-parameters';
 import {
   aws_certificatemanager as CertificateManager, Duration, aws_ssm as SSM, Stack,
   StackProps,
 } from 'aws-cdk-lib';
 import { HostedZone } from 'aws-cdk-lib/aws-route53';
-import { RemoteParameters } from 'cdk-remote-stack';
 import { Construct } from 'constructs';
 import { Configurable, Configuration } from './Configuration';
 import { Statics } from './Statics';
