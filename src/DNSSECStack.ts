@@ -1,6 +1,6 @@
+import { RemoteParameters } from '@gemeentenijmegen/cross-region-parameters';
 import { DnssecRecordStruct } from '@gemeentenijmegen/dnssec-record';
 import { Duration, aws_route53 as Route53, aws_ssm as SSM, Stack, StackProps } from 'aws-cdk-lib';
-import { RemoteParameters } from 'cdk-remote-stack';
 import { Construct } from 'constructs';
 import { Configurable } from './Configuration';
 import { Statics } from './Statics';
