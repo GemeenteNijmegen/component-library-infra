@@ -49,10 +49,10 @@
     "typescript": "^5.9.3"
   },
   "dependencies": {
-    "@aws-sdk/client-cloudfront": "^3.984.0",
-    "@gemeentenijmegen/aws-constructs": "^0.0.47",
+    "@aws-sdk/client-cloudfront": "^3.985.0",
+    "@gemeentenijmegen/aws-constructs": "^0.0.48",
     "@gemeentenijmegen/cross-region-parameters": "^0.0.4",
-    "@gemeentenijmegen/dnssec-record": "^0.0.41",
+    "@gemeentenijmegen/dnssec-record": "^0.0.42",
     "@gemeentenijmegen/projen-project-type": "^1.12.1",
     "@gemeentenijmegen/utils": "^0.0.38",
     "@types/aws-lambda": "^8.10.160",
