@@ -45,6 +45,12 @@ export interface Configuration {
    */
   readonly cnameRecords?: { [key: string]: string };
 
+  /**
+   * Set no mail records in DNS hostedzone
+   * When true, add txt with spf (sender policy framework) en mx 0 records signaling no mail
+   */
+  readonly noMailRecords?: boolean;
+
 }
 
 /**
@@ -82,6 +88,7 @@ const configurations: { [name: string]: Configuration } = {
     },
     subdomain: 'componenten-dev',
     includePipelineValidationChecks: false,
+    noMailRecords: true,
   },
   acceptance: {
     branchName: 'acceptance',
@@ -93,6 +100,7 @@ const configurations: { [name: string]: Configuration } = {
     subdomain: 'componenten-accp',
     alternativeDomains: ['componenten.acc.nijmegen.nl'],
     includePipelineValidationChecks: false,
+    noMailRecords: true,
   },
   production: {
     branchName: 'main',
@@ -104,5 +112,6 @@ const configurations: { [name: string]: Configuration } = {
     subdomain: 'componenten',
     alternativeDomains: ['componenten.nijmegen.nl'],
     includePipelineValidationChecks: false,
+    noMailRecords: true,
   },
 };
