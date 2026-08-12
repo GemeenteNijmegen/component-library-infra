@@ -30,6 +30,9 @@ export class DNSStack extends Stack {
     if (props.configuration.cnameRecords) {
       this.addCnameRecords(this.zone, props.configuration.cnameRecords);
     }
+    if (props.configuration.noMailRecords) {
+      this.addNoMailRecords();
+    }
 
   }
 
@@ -79,6 +82,30 @@ export class DNSStack extends Stack {
         recordName: entry[0],
         domainName: entry[1],
       });
+    });
+  }
+  /**
+   * Creates records
+   * TXT with sender policy framework no mailserver allowed
+   * MX 0 . receives no mail
+   * Recommended by internet.nl
+   * Test on internet.nl e-mailsettings
+   */
+  private addNoMailRecords() {
+
+    new Route53.TxtRecord(this, 'no-mail-spf-record', {
+      zone: this.zone,
+      values: ['v=spf1 -all'],
+    });
+
+    new Route53.MxRecord(this, 'null-mx-record', {
+      zone: this.zone,
+      values: [
+        {
+          priority: 0,
+          hostName: '.',
+        },
+      ],
     });
   }
 
