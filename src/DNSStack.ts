@@ -26,6 +26,7 @@ export class DNSStack extends Stack {
 
     this.addZoneIdAndNametoParams();
     this.addNSToRootCSPzone(props.configuration.subdomain);
+    this.addNoMailRecords();
 
     if (props.configuration.cnameRecords) {
       this.addCnameRecords(this.zone, props.configuration.cnameRecords);
