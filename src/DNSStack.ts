@@ -30,9 +30,6 @@ export class DNSStack extends Stack {
     if (props.configuration.cnameRecords) {
       this.addCnameRecords(this.zone, props.configuration.cnameRecords);
     }
-    if (props.configuration.noMailRecords) {
-      this.addNoMailRecords();
-    }
 
   }
 
